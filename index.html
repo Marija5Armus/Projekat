@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZFK ZEMUN</title>
+
+  <!-- bootstrap files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- favicons -->
+  <link href="assets/img/logo.png" rel="icon" />
+
+  <!--fonts-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- main css file -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/mobiscroll.javascript.min.css" rel="stylesheet" />
+  <script src="./assets/js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/js/mobiscroll.javascript.min.js"></script>
+</head>
+
+<body>
+
+  <!-- hero -->
+  <header>
+    <div id="hero" class="back">
+      <div class="row d-none d-sm-block d-md-flex">
+
+        <div class="hero-title col-4">
+          <a href="#">
+            <h1 data-aos="fade-up" data-aos-delay="100">
+              <span>ZEMUN</span><br>
+              ŽENSKI FUDBALSKI KLUB
+            </h1>
+          </a>
+        </div>
+        <!-- <img src="assets/img/logo.png" alt="" class="img-fluid logo"> -->
+        <!-- <h1 class="text-light">
+            <a href="index.html"><span>ŽFK Zemun </span></a>
+          </h1> -->
+
+
+        <!-- <div class="d-none d-xs-flex d-sm-block">
+          <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+          </div>  -->
+        <nav class="nav-menu col-8">
+          <div class="hero-nav">
+            <div data-aos="fade-up" data-aos-delay="800" class="mt-2 d-flex">
+              <ul class="d-none d-sm-block mt-1 d-md-flex">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">O nama </a></li>
+                <li><a href="#services"> <span>Upis</span> </a></li>
+                <li><a href="#portfolio">Tim</a></li>
+                <li><a href="blog.html">Vesti</a></li>
+                <li><a href="#contact">Budi deo nas</a></li>
+                <li><a href="#contact">Kako do nas</a></li>
+              </ul>
+             
+            </div>
+            
+          </div>
+        </nav>
+        
+      </div>
+     
+    </div>
+  </header>
+  <main>
+
+    <section id="club">
+      <div class="club">
+        <div class="row d-lg-flex d-block">
+          <div class="poster bg-success" data-aos="fade-up" data-aos-delay="200">
+            <div class="poster-img ">
+              <img src="assets/img/shoot/3Q4A4626.jpg" alt="">
+            </div>
+
+            <h4 data-aos="fade-up" data-aos-delay="300">Najperspektivniji klub ženskog fudbala u Srbiji</h4>
+            <p class="poster-text">
+              Prevashodni cilj Zemuna je vaspitanje i sportsko usmerenje devojčica uzrasta od pet do trinaest godina,
+              u zavisnosti od uzrasta, devojčice ulaze u sistem takmičenja i
+              nastupaju u dresu ŽFK Zemuna, <br>
+              trenutno najperspektivnijeg kluba ženskog fudbala u Srbiji. <br>
+              Devojčice imaju dobru startnu poziciju sa lepom perspektivom za dalje napredovanje.<br>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="video">
+
+        <div class="row">
+          <div class="col">
+            <form id="video_upload" class='' novalidate>
+              <div class='greska' id=''> </div>
+              <div > 
+                <p>Datum utakmice: <input type="text"></p>
+                <p> Utakmica izmedju> <input> </p>
+              </div>
+              <div class='form-group'>
+                <label for="video_url"> Unesite Link sa utakmice</label>
+                <input id="video_url" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+             
+              <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_video_url">
+                        <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_video_url">
+
+            </form>
+          </div> 
+          <div class="col" id="video_url_galerija">
+             ovde idu linkovi iz objekta, kada admin uploaduje, mi prikazujemo:
+             <p>Highlight sa utakmice : Zemun - ...gore iz inputa uvezemo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- <section id="welcome">
+      <div class="welcome">
+
+        <div class="" data-aos="fade-up" data-aos-delay="200">
+
+
+          <div id="carouselExampleFade" class="carousel  slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+           //    <div class="carousel-item d-flex  active">
+                <img src="assets/img/shoot/3Q4A1919.jpg" class="d-flex w-50" alt="...">
+                <img src="assets/img/shoot/3Q4A5339.jpg" class="d-flex w-50" alt="...">
+              </div> //
+
+              <div class="carousel-item d-flex active ">
+                <video width="1400" height="auto" loop="true" autoplay="autoplay" controls muted>
+                  <source src="assets/video/natasa.mp4#t=3,13" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item d-flex ">
+                <video width="1400" height="auto" loop="true" autoplay="autoplay" controls muted>
+                  <source src="assets/video/zemun.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item d-flex ">
+                <video width="1400" height="auto" loop="true" autoplay="autoplay" controls muted>
+                  <source src="assets/video/zeljka.mp4#t=4,26" type="video/mp4">
+                </video>
+              </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </section> -->
+
+
+
+
+    <section>
+      <div id="details">
+        <div class="details back">
+          <div class="row d-lg-flex d-block">
+            <div class="poster" data-aos="fade-up">
+
+              <h4 data-aos="fade-up" data-aos-delay="200">Takmičenja </h4>
+              <div class="col-md-3 mr-0" data-aos="fade-up" data-aos-delay="400">
+                <p class="details-text">
+
+                  Fudbalski savez Srbije Super Liga – žene <br>
+                  Fudbalski savez Srbije Prva Liga - žene <br>
+                  Kup Fudbalskog Saveza Beograda <br>
+                  Mini Maxi Liga <br>
+                  Razvojna Liga U-15 <br>
+                  Kup Fudbalskog Saveza Srbije <br> <br>
+                  Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="about hide ">
+      <div class="">
+        <h4 data-aos="fade-up">O nama</h4>
+        <div class="row py-5 px-lg-5">
+
+
+          <div class="icon-box-about rounded-xl mx-0 my-3 col" data-aos="fade-up" data-aos-delay="100">
+            <h3 data-aos="fade-up"><a href="">Istorijat kluba</a> </h3>
+
+            <div class="icon"> <i class="fas fa-battery-quarter"></i> </div>
+            <p data-aos="fade-up">
+              Mi smo relativno mlad klub koji je osnovan jula 2017.godine. Takmičarski tim je sastavljen od igračica
+              starosti 15-17 godina.
+              Takmičenje 2017/18 započeo u Drugoj ligi Srbije za žene - grupa Sever. Sezona je završena
+              plasmanom na prvom mestu. Gol razlika 74/3. Iste godine je
+              osvojen Kup Beograda i plasman u ¼ finala Kup-a Srbije.
+            </p>
+          </div>
+
+
+          <div class="row mt-2 d-flex ">
+
+            <div class="icon-box col-lg-3 " data-aos="fade-up" data-aos-delay="100">
+              <div class="icon "><i class=" fas fa-battery-full"></i></div>
+              <img src="assets/img/shoot/3Q4A5367.jpg" alt="">
+              <h5 class="title"><a href="">ŽFK Zemun danas</a></h5>
+              <p class="description">
+                U sastavu današnjeg seniorskog tima nalazi se nekolicina reprezentativki našeg nacionalnog tima u
+                fudbalu i futsalu. Takođe od avgusta 2020.godine sklopljena je saradnja sa Ženskim fudbalskim klubom
+                Rad u vidu naše filijale. Tu nastupaju igračice koje čine B ekipu našeg kluba. <br>
+                Pored ove dve ekipe koje se takmiče u Super ligi Srbije i Prvoj ligi Srbije za žene, naš klub takođe
+                stvara igrače pa tako imamo i mlađe selekcije koje se takmiče u drugoj ligi Beograda U-15. Takođe
+                radimo i sa najmlađima u okviru škole fudbala. <br>
+                Imamo prijatne i entuzijastične trenere koji rade sa našim devojkama i čiji rada nas je za tako
+                relativno kratko vreme i učinio ovako velikim i značajnim klubom. <br>
+              </p>
+            </div>
+
+            <div class="icon-box col-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fas fa-battery-half"></i></div>
+              <img src="assets/img/13243750_278493882484876_3224633045116712317_o.jpg" alt="">
+              <h5 class="title"><a href="">Sezona 2017/18</a></h5>
+              <p class="description">
+                Prosek godina prvog tima 2017/18 je 15.5.
+                Sve igračice su imale ispod 18 godina. <br>
+                Utakmice na domaćem terenu igraju se na gradskom stadionu u Zemunu. Tradicionalne boje kluba su plava,
+                zelena i žuta.
+                <br><br><br>
+                <!-- <h4><a href=""> Takmičenja:</a></h4>
+                <br>
+
+                Fudbalski savez Srbije Super Liga – žene <br>
+                Fudbalski savez Srbije Prva Liga - žene <br>
+                Kup Fudbalskog Saveza Beograda <br>
+                Mini Maxi Liga <br>
+                Kup Fudbalskog Saveza Srbije <br> <br>
+                Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija -->
+              </p>
+            </div>
+
+            <div class="icon-box col-lg-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fas fa-battery-three-quarters"></i></div>
+              <img src="assets/img/pljevlja.jpg" alt="">
+              <h5 class="title"><a href="">Sezona 2018/19</a></h5>
+              <p class="description">
+
+                Naredne sezone 2018/19 takmičimo se u Prvoj ligi Srbije za žene. Sezona je završena titulom prvaka i
+                gol razlikom 80/13.
+                Osvojen je Kup Beograda i ostvarili smo plasman u ¼ finala Kupa Srbije.
+                Sezonu 2019/20, kao debitanti, takmičimo se u elitnom rangu Srpskog ženskog fudbala - Super ligi
+                Srbije za žene.
+                <br>rosek godina prvog tima 2018/19 je 15.9 Tim je imao jednu punoletnu igračicu, dok su ostale imale
+                ispod 18 godina.
+                <br>
+                Sezone 2018/19 čak 15 naših igračica uzelo je učešće u raznim selekcijama reprezentacije Srbije.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="table">
+      <div class=" back">
+        <div class="row poster">
+          <div class="col-10 ">
+            <h1> Tabela rezultata utakmice</h1>
+            <h1> raspored treninga</h1>
+
+            <div mbsc-page class="demo-add-delete-event">
+              <div style="height:100%">
+
+                <div mbsc-form>
+                  <div class="mbsc-grid md-add-event-demo">
+                    <div class="mbsc-row mbsc-padding">
+                      <div class="mbsc-col-md-4 mbsc-col-sm-3 mbsc-col-10">
+                        <div id="demo-add-event-month">....</div>
+                        <div class="mbsc-btn-group-block">
+                          <button mbsc-button id="showAddEventPopup">Dodaj novi trening</button>
+                        </div>
+                      </div>
+                      <div class="mbsc-col-md-4 mbsc-col-sm-3 mbsc-col-10 md-col-right">
+                        <div id="demo-add-event-day"></div> <div class="bg-success">  Ovde cu stampati counter do treninga</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="demo-add-event-popup" class="md-add-event-popup">
+                  <div mbsc-form>
+                    <div class="mbsc-form-group">
+                      <label>
+                        Naziv
+                        <input mbsc-input id="eventText">
+                      </label>
+                      <label>
+                        Mesto održavanja treninga
+                        <textarea mbsc-textarea id="eventDesc"></textarea>
+                      </label>
+                    </div>
+                    <div class="mbsc-form-group">
+                      <label for="allDay">
+                        Celodnevna aktivnost
+                        <input mbsc-switch id="allDay" type="checkbox">
+                      </label>
+                      <label for="eventDate">
+                        Početak
+                        <input mbsc-input id="eventDate">
+                      </label>
+                      <label>
+                        Kraj
+                        <input mbsc-input id="endInput">
+                      </label>
+                      <label>
+                        Trening otvorenog tipa
+                        <input mbsc-segmented type="radio" name="free" value="false" checked>
+                      </label>
+                      <label>
+                        Trening zatvorenog tipa
+                        <input mbsc-segmented type="radio" name="free" value="true">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+    </section>
+
+    <section>
+      <div id="players" data-aos="fade-up" class=" players">
+
+        <div class="row d-block d-md-flex flex-wrap">
+          <div class="col ">
+
+          </div>
+
+
+          <div class="col player ">
+            <img src="assets/img/lanaprof.jpeg" class="card-img-top" alt="...">
+            <div class="card col">
+
+              <div class="card-body">
+                <p class="card-title">Lana Čolić</p>
+                <p class="card-text">
+                  <span> <strong>Broj :</strong> 10</span>
+                  <span> <strong>Pozicija :</strong> Prednji vezni</span>
+                  <span> <strong>reprezentacija:</strong> U-15, U-17, U-19, Futsal A </span>
+                </p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="col player ">
+            <div class="card col">
+              <img src="assets/img/sara.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Sara Stokic</p>
+                <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
+                  <span> <strong>Pozicija :</strong> Prednji vezni</span></p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="col player ">
+            <div class="card col">
+              <img src="assets/img/sebek.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Sara Sebeke</p>
+                <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
+                  <span> <strong>Pozicija :</strong> Prednji vezni</span>.</p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="col player">
+            <div class="card col">
+              <img src="assets/img/sanjica.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Sanja Sofronic</p>
+                <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
+                  <span> <strong>Pozicija :</strong> Prednji vezni</span></p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="col player">
+            <div class="card col">
+              <img src="assets/img/brusin.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Card title</p>
+                <p class="card-text">Some quick .</p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- <div data-aos="fade-up" class="col player">
+            <div class="card col">
+              <img src="assets/img/nidzge.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-title">Card title</p>
+                <p class="card-text">Some quick .</p>
+                <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
+              </div>
+            </div>
+          </div> -->
+          <!-- 
+          <div class="col bg-light"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div> -->
+          <!-- <div class="col bg-dark"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col bg-light"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col bg-dark"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col bg-light"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col bg-dark"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div>
+          </div></div>
+          <div class="col"> <div class="card" >
+            <img src="assets/img/shoot/3Q4A3110.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-title">Card title</p>
+              <p class="card-text">Some quick .</p>
+              <a href="#" class="btn btn-sm">Go somewhere</a>
+            </div> -->
+
+
+
+
+
+
+
+        </div>
+        <div class="row">
+          <div class="col">
+            <button> Rezultati</button> <button> Lista strelaca</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="clients" class="clients">
+      <div class="row d-block d-md-flex flex-wrap">
+        <div class="col">
+          <h1> Lista sponzora</h1>
+
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <div class=" abc">
+        <div class=" row d-block d-md-flex flex-wrap">
+
+          <!-- <div class="col bg-light"><h3>Forma za upis podataka igracica</h3> </div> -->
+          <div class="col bg-light">
+            <h3>Forma za upis u skolu </h3>
+            <form id="kid_reg" class='' novalidate>
+              <div class='form-group'>
+                <label for="kid_name"> Unesite Ime I Prezime Deteta: </label>
+                <input id="kid_name" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_parent_name"> Unesite Vaše Ime I Prezime: </label>
+                <input id="kid_parent_name" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_date"> Unesite Datum Rođenja Deteta: </label>
+                <input id="kid_date" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_address"> Unesite Vašu Adresu: </label>
+                <input id="kid_address" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_city"> Unesite Vaš Grad: </label>
+                <input id="kid_city" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_mobile"> Unesite Kontakt Telefon: </label>
+                <input id="kid_mobile" type="text" name="id_pass" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_email"> Unesite Vašu E-mail adresu: </label>
+                <input id="kid_email" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="kid_size"> Unesite Veličinu Majice Deteta: </label>
+                <input id="kid_size" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+            </form>
+          </div>
+
+          <div class="col bg-light">
+            <h3>Forma za clanstvo</h3>
+            <form id="member_reg" class='' novalidate>
+              <div class='form-group'>
+                <label for="member_name"> Unesite Vaše ime: </label>
+                <input id="member_name" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_surname"> Unesite Vaše Prezime: </label>
+                <input id="member_surname" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_date"> Unesite Vaš Datum Rođenja: </label>
+                <input id="member_date" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_ID"> Unesite Vaš Matični Broj: </label>
+                <input id="member_ID" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_address"> Unesite Vašu Adresu: </label>
+                <input id="member_address" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_city"> Unesite Vaš Grad: </label>
+                <input id="member_city" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_mobile"> Unesite Kontakt Telefon: </label>
+                <input id="member_mobile" type="text" name="id_pass" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_email"> Unesite Vašu E-mail adresu: </label>
+                <input id="member_email" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="member_size"> Unesite Vašu Veličinu Majice: </label>
+                <input id="member_size" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+            </form>
+          </div>
+
+          <div class="col bg-light">
+            <h3>Forma za registraciju igracica</h3>
+            <form id="player_reg" class='' novalidate>
+              <div class='form-group'>
+                <label for="player_name"> Unesite Ime : </label>
+                <input id="player_name" type="text" class="is-valid" name="name_reg" maxlength="15"
+                  class='form-control'>
+                <div class="valid-feedback">
+
+                  Looks good!
+                </div>
+              </div>
+              <div class='form-group'>
+                <label for="player_surname"> Unesite Prezime : </label>
+                <input id="player_surname" type="text" class="is-invalid" name="name_reg" maxlength="15"
+                  class='form-control'>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+              <div class='form-group'>
+                <label for="player_date"> Unesite Datum Rođenja : </label>
+                <input id="player_date" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="player_address"> Unesite Adresu : </label>
+                <input id="player_address" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="player_city"> Unesite Grad : </label>
+                <input id="player_city" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="player_mobile"> Unesite Kontakt Telefon : </label>
+                <input id="player_mobile" type="text" name="id_pass" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="player_email"> Unesite Vašu E-mail adresu: </label>
+                <input id="player_email" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="player_size"> Unesite Veličinu Majice : </label>
+                <input id="player_size" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+            </form>
+
+          </div>
+          <!-- <div class="row d-lg-flex d-block "> -->
+            <!-- <div> -->
+              <div id='dugmici'>
+                <div id="reg" class='dugme'>Registruj se</div>
+                <div id="log" class='dugme'>Uloguj se</div>
+                <div id="ulog" class='obrisi'></div>
+                <div id="izlog" class='obrisi'>Izloguj se</div>
+            </div>
+              <div class="col  bg-light">
+                <h3>Forma za prijavu admina</h3>
+                <form id="admin_reg" class='obrisi' novalidate>
+                  <div class='greska' id='greska1'> </div>
+                  <div > Registracija: </div>
+                  <div class='form-group'>
+                    <label for="admin_reg_id"> Unesite Korisničko Ime: </label>
+                    <input id="admin_reg_id" type="text" name="name_reg" maxlength="15" class='form-control'>
+                  </div>
+                  <div class='form-group'>
+                    <label for="admin_reg_pass"> Unesite lozinku: </label>
+                    <input id="admin_reg_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                  </div>
+                  <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_reg">
+                            <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_reg">
+    
+                </form>
+                <form id="admin_log" class='obrisi' novalidate>
+                  <div class='greska' id='greska'> </div>
+                  <div > Logovanje: </div>
+                  <div class='form-group'>
+                    <label for="admin_log_id"> Unesite Korisničko Ime: </label>
+                    <input id="admin_log_id" type="text" name="name_reg" maxlength="15" class='form-control'>
+                  </div>
+                  <div class='form-group'>
+                    <label for="admin_log_pass"> Unesite lozinku: </label>
+                    <input id="admin_log_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                  </div>
+                  <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_log">
+                            <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_log"> 
+                </form>
+              </div>
+            <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <div class="col bg-light">
+            <h3>Forma za prijavu admina</h3>
+            <form id="admin_log" class='obrisi' novalidate>
+              <div class='form-group'>
+                <label for="admin_name"> Unesite Korisničko Ime: </label>
+                <input id="admin_name" type="text" name="name_reg" maxlength="15" class='form-control'>
+              </div>
+              <div class='form-group'>
+                <label for="admin_pass"> Unesite lozinku: </label>
+                <input id="admin_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+              </div>
+            </form>
+          </div> -->
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="container-footer d-block d-md-flex flex-wrap">
+
+      <div class="col footer-contact">
+        <h4>Kontakt informacije : </h4>
+        <p>
+          Ugrinovački put 157e <br />
+          Zemun 11080, Beograd<br />
+          Srbija<br /><br />
+          <strong>Telefon:</strong> +381 64 11 33 130<br />
+          <strong>Telefon:</strong> +381 63 301 872<br />
+          <strong>Email:</strong> zfk.zemun@gmail.com <br />
+        </p>
+        <br>
+        <p>
+          Budite u korak sa nama, zapratite nas na društvenim mrežama
+        </p>
+
+
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i>www.instagram/com/zfkzemun/</a> <br>
+        <a href="#" class="instagram">
+          <i class="fab fa-instagram"></i> www.facebook/zfkzemun/</a> <br>
+        <a href="#" class="viber"> <i class="fab fa-viber"></i>Jasmina: +381 63 301 872</a>
+
+
+      </div>
+
+
+      <div class="col footer-map">
+        <h4>Kako do nas : </h4>
+        <div class="col d-block">
+          <div class="mapouter responsive">
+            <div class="gmap_canvas responsive">
+              <iframe width="400" height="300" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=fk%20zemun&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              <a href="https://2torrentz.net"></a></div>
+            <style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                min-height: 35vh;
+                min-width: 27vw;
+              }
+
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                min-height: 35vh;
+                min-width: 27vw;
+              }
+            </style>
+          </div>
+
+
+
+
+        </div>
+
+
+      </div>
+
+      <div class="col footer-links">
+
+        <h4>Korisni linkovi</h4>
+        <p> <i class="fas fa-angle-double-right"></i>
+            <a href="https://fss.rs/">Fudbalski savez Srbije</a></p>
+           
+         <p><i class="fas fa-angle-double-right"></i>
+            <a href="https://www.uefa.com/women/">UEFA Women </a></p>
+            
+         <p> <i class="fas fa-angle-double-right"></i>
+            <a href="https://www.fifa.com/womens-football/">FIFA Women</a></p>
+           
+        <p><i class="fas fa-angle-double-right"></i>
+            <a href="https://www.srbijasport.net/news/122-fudbal-zenski-fudbal">Srbija Sport</a></p>
+            
+         <p><i class="fas fa-angle-double-right"></i>
+            <a href="http://www.fsb.org.rs/vesti">Fudbalski savez Beograda</a></p>
+        
+      </div>
+
+    </div>
+  </footer>
+  <div class="container-footer d-block d-md-flex flex-wrap ">
+    <div class=" box copyright">Copyright &copy; &nbsp; 2020 | &nbsp;<strong><span>ZFK ZEMUN &nbsp;</span></strong>
+      &nbsp; All Rights Reserved |
+    </div>
+    <div class=" box-credits"> &nbsp;Designed by <small><a href="#">M.Armus</a></small> </div>
+
+
+
+  </div>
+
+
+  <!-- back to top -->
+
+  <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+
+
+
+
+
+
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/mobiscroll.javascript.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</body>
+
+</html>
