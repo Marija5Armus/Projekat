@@ -74,7 +74,7 @@ body {
   font-family: narrow, sans-serif;
   line-height: 1.5;
   /* background: var(--light-color); */
-  background: rgba(255, 255, 255, 0.28);
+  background-color: rgba(199, 186, 92, 0.25);
   color: var(--dark-color);
   overflow-x: hidden;
   margin-left: 5vh;
@@ -139,18 +139,18 @@ input {
   color: var(--club2-color);
 }
 #mainContainer{
-  width: 95vw;
-  height: 150vh;
-  border: 1px solid black;
+  width: 99vw;
+  height: auto;
+  /* border: 1px solid black; */
   overflow: hidden;
   /* background-color: khaki; */
-  margin-bottom: 30vh;
-  margin-top: 10vh;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .row {
-  border: 2px double blue;
+  /* border: 2px double blue; */
   justify-content: center;
   justify-items: right;
   align-items: center;
@@ -165,7 +165,7 @@ input {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 3%;
   margin: 0 3px 0 0px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   min-height: 40vh;
   min-width: 28vw;
   overflow: hidden;
@@ -174,6 +174,7 @@ input {
 .back {
   width: 99vw !important;
   min-height: 85vh;
+  height: auto;
   background-attachment: fixed;
   background-size: cover ;
   background-repeat: no-repeat;
@@ -183,29 +184,29 @@ input {
   border-radius: 0 3% 0 3%;
 }
 main {
-  border: 5px solid white;
+  /* border: 5px solid white; */
   border-radius: 10px;
   justify-content: center;
   align-content: center;
   align-items: center;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   overflow: hidden;
   font-family: narrow;
   /* background-color: var(--club-color); */
 }
 
 .container {
-  width: 89vw;
+  width: 99vw;
   height: auto;
   z-index: 1;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   border-radius: 10px;
   justify-content: center;
   align-content: center;
   align-items: center;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   overflow: hidden;
   font-family: narrow;
   box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
@@ -261,7 +262,7 @@ h1 > span {
  } */
 
 nav{
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   height: 30vh; 
   width: auto;
   /* color: black !important; */
@@ -477,7 +478,60 @@ iframe{
   /* border: 2px solid black; */
   max-width: 99vw;
   overflow: hidden;
-  background-image: url("../img/IMG_001\ \(206\).jpg");
+  background-color: rgba(199, 187, 92, 0.429);  position: relative;
+  /* background-image: url("../img/IMG_001\ \(206\).jpg"); */
+}
+.about h6{
+  font-size: 0.9rem;
+  box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+ 
+  text-transform: uppercase;
+  font-weight: bolder;
+ 
+}
+
+
+.kocka{
+  background-color: rgba(90, 139, 21, 0.429); 
+  width: 75vw;
+  height: 75vh; position: absolute;
+  margin-top: 30vw;
+  border-radius: 5%;
+}
+
+.pOne{
+  overflow: hidden;
+  text-align: justify;
+  border-radius: 5%;
+  margin-left: 1vw;
+
+}
+.aboutTrio{
+  overflow: hidden !important;
+  margin: 1vw;
+  width: 95vw;
+
+
+}
+.pTwo img{
+  width: 70%;
+  height: auto;
+  margin-right: 10vw;
+  border-radius: 5%;
+}
+
+.description{
+  border-radius: 3%;
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  background-color: rgba(166, 187, 230, 0.3);
+  /* overflow: hidden; */
+  
+}
+.iconDescription{
+  
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  background-color: rgba(166, 187, 230, 0.062);
 }
 
 .poster {
@@ -490,9 +544,20 @@ iframe{
   backface-visibility: hidden;
 }
 
-.poster > .poster-img {
+.poster  .poster-img {
   height: 5vh;
   z-index: -1;
+}
+.icon-box h5{
+  font-size: 1.5rem;
+  box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  /* margin-top: 2vh;
+  margin-left: 2vw; */
+  /* padding: 10px; */
+  text-transform: uppercase;
+  font-weight: bolder;
+  min-width: 30vw;
 }
 
 .poster h4,
@@ -557,22 +622,23 @@ iframe{
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   border-radius: 1px;
   margin: 2px 1vw;
-  min-height: 85vh;
+  /* min-height: 85vh; */
   min-width: 20vw;
   z-index: 2;
+  overflow: hidden;
 }
-.icon-box:hover,
+/* .icon-box:hover,
 .icon-box-about:hover {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-}
+} */
 
 .icon-box-about {
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
   padding: 3px 10px 4px 10px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
-
+overflow: hidden;
   min-height: 20vh;
   z-index: 3;
 }
@@ -639,9 +705,9 @@ iframe{
 /*--------------------------------------------------------------
 # players
 --------------------------------------------------------------*/
-.players{
-  background-image: url("../img//shoot/3Q4A5163.jpg");
-}
+/* .players{
+  /* background-image: url("../img//shoot/3Q4A5163.jpg"); */
+/* }  */
 .igraci {
   width: inherit;
   overflow: hidden;
@@ -702,56 +768,45 @@ iframe{
 
 #partneriKluba{
   background-image: url("../img//shoot/3Q4A3390.jpg");
-  max-height: 40vh;
+  margin-top: 2vh;
   justify-content: center;
-  align-items: flex-end;
   bottom: 1vh;
   box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
   border-radius: 1%;
+  overflow: hidden;
 
 }
 .logo{
-  max-width: 10vw;
-  height:auto;
-  min-height: 15vh;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  border-radius: 10%;
+  width: inherit;
+  justify-content: center;
+  
+}
+ .logo img:hover{
+   background-color:rgba(48, 230, 106, 0.429); 
+ }
+.logo img{
+  min-height: 140px;
   background-color: rgba(199, 187, 92, 0.429); 
+  width: 150px;
+  height: auto;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  border-radius: 10%;
   margin-right: 1.5vw;
   margin-left: 1.5vw;
   margin-top: 1vh;
   margin-bottom: 1vh;
-
   text-align: center;
-  align-content: center;
-  
   
 }
- .logo:hover{
-   background-color:rgba(48, 230, 106, 0.429); 
-   
- }
-.logo img{
-  width: 70%;
-  height: 70%;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  border-radius: inherit;
-  align-content: center;
-}
-
 
 /*--------------------------------------------------------------
 # rez
 --------------------------------------------------------------*/
 
 #tableRez{
-  
     background-image: url("../img/lenaemotion.jpg");
   
 }
@@ -762,6 +817,14 @@ iframe{
 #dodaj-u-tabelu{
   display: none;
 } 
+
+#table-games{
+  background-color: rgba(20, 60, 139, 0.429); 
+  color: #fff;
+  border-radius: 5%;
+}
+
+
 
 /*--------------------------------------------------------------
 # forme
@@ -782,14 +845,15 @@ iframe{
 
 }
 #kid_reg {
- background-color: var(--dark-color); 
+ background-color:  rgba(166, 187, 230, 0.3);
  /* background-image: url("../img/shoot/3Q4A3189.jpg"); */
   opacity: 0.98;
-  color: var(--light-color);
+  color: var(--dark-color);
   /* min-height: inherit; */
   max-height: inherit;
   overflow: hidden !important;
   border-radius: 5%;
+  font-weight: bolder;
   box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
   border: 1px solid gray;
   
@@ -841,14 +905,29 @@ iframe{
   border: 1px solid gray;
   background-color: rgba(166, 230, 197, 0.103);
 }
-#accordion button{
-  color: #fff;
+#accordionT{
+  
+  border-radius: 3%;
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  padding: 4vw;
+  width: 70%;
+  /* border: 1px solid gray; */
+  background-color: rgba(166, 230, 197, 0.103);
 }
-#accordion button:hover{
+#accordionT button{
+  color: #000;
+}
+
+
+#accordion button{
+  color: #fff;  text-decoration: none;
+}
+#accordion button:hover, #accordionT button:hover{
   color: #fff;
   font-weight: bolder;
   background-color: #28a745;
 }
+
 
 #formaClanstvo{
   border-radius: 5%;
@@ -870,6 +949,7 @@ iframe{
   width: 50%;
   justify-content: center;
 }
+
 .card-body{
   background-color:rgba(236, 199, 53, 0.565); 
 }
@@ -899,7 +979,7 @@ iframe{
   margin-top: 5vh;
   padding: 0 2rem;
   overflow: hidden;
-  
+  background-color: rgba(199, 186, 92, 0.25);
   /* background: #007b5e; */
    /* background-color: #40414040;  */
   z-index: 1;
@@ -929,7 +1009,7 @@ iframe{
   min-height: 30vh;
   height: 50vh;
   margin: 10px;
- 
+  background-color: rgba(199, 187, 92, 0.429);
   /* background-color: var(--club-color); */
   /* background-color: rgba(15, 26, 80, 0.776); */
   color: var(--dark-color);
@@ -939,7 +1019,9 @@ iframe{
 .footer-links p{
   padding-top: 1vh;
 }
-
+.facebook, .instagram, .viber{
+  width: 4vw;
+}
 
 /* .footer-social:hover, .footer-links:hover, .footer-contact:hover, .footer-map:hover {
     background: rgba(16, 41, 77, 0.639);
@@ -956,6 +1038,10 @@ iframe{
 .box-credits > a {
   color: var(--primary-color);
 }
+
+
+
+
 
 /* table calendar for training */
 

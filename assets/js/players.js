@@ -1,16 +1,12 @@
 
-  // SORT, FILTER IGRACA I STAMPANJE POSTAVE ZA UTAKMICU
-  var igraci = document.querySelector('.igraci');
-  podaciIgraca(data);
-
-
-  function podaciIgraca(data) {
-
-    let info = "";
-
-    for (let i = 0; i < data.length; i++) {
-      let igrac = data[i];
-      info += `<div class=" player d-flex flex-wrap">
+// SORT, FILTER IGRACA I STAMPANJE POSTAVE ZA UTAKMICU
+var igraci = document.querySelector('.igraci');
+podaciIgraca(data);
+function podaciIgraca(data) {
+  let info = "";
+  for (let i = 0; i < data.length; i++) {
+    let igrac = data[i];
+    info += `<div class=" player d-flex flex-wrap">
       <img src=${igrac.Slika} class="card-img-top" alt="...">
       <div class="cardPlayer"><p class="card-title">${igrac.Ime}</p>
       <p class="card-text">
@@ -19,80 +15,73 @@
         <span><strong>Datum rođenja :</strong> ${igrac.Datum}</span>
         <span><strong>Nastupi za Rezentaciju : </strong> U-15, U-17, U-19, Futsal A </span>
         <span><strong>Golova u sezoni :</strong> 9 </span>
-        <a class="korpaText btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
+        <a class="btnPostava btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
       </p></div>
       </div>`;
-
-
-    }
-    // if (row==igraci)
-    igraci.innerHTML = info;
-
-
-    // else if(row)
   }
-
-  var korpa = document.getElementById('korpa');
-
-  var KlasaT = document.getElementsByClassName("korpaText");
-  for (let i = 0; i < KlasaT.length; i++) {
-    KlasaT[i].addEventListener("click", dohvatiArtikal);
-  }
-
-  var tbMOdel = document.getElementById("tbDeoModel");
-
-  var sortiraj = document.getElementById("sortMarka");
-
-  var sortirajAZ = document.getElementById("sortMarkaAZ");
-
-  var tbMOdelPoz = document.getElementById("tbDeoModelPoz");
-
-  var btnCena = document.getElementById('btnCena');
-
-  var prikaziCenu = document.getElementById("rnCena");
+  igraci.innerHTML = info;
+}
 
 
-  var cena = document.getElementById("rnCena").value;
+var prvaPostava = document.getElementById('prvaPostava');
+
+var igraciZaSledeceKolo = document.getElementsByClassName("btnPostava");
+for (let i = 0; i < igraciZaSledeceKolo.length; i++) {
+  igraciZaSledeceKolo[i].addEventListener("click", uzmiIgraca);
+}
+
+var imeIgraca = document.getElementById("imeIgraca");
+
+var sortiraj = document.getElementById("sortBrojevaAZ");
+
+var sortirajZA = document.getElementById("sortBrojevaZA");
+
+var pozicijaIgraca = document.getElementById("pozIgraca");
+var pozIgracaVr = pozicijaIgraca.value;
+var btnGodine = document.getElementById('btnGodine');
+
+var prikaziInputGod = document.getElementById("inputGod");
+
+var godIgraca = document.getElementById("inputGod").value;
 
 
-  function izmeniCenu() {
-    // var cena = document.getElementById("rnCena").value;
-    document.getElementById("cenaIzbor").textContent = cena;
-  }
+function menjajGodine() {
+  var godIgraca = document.getElementById("inputGod").value;
+  document.getElementById("godIzbor").textContent = godIgraca;
+}
 
 
-  function filterCena() {
-    //ovde smo sami stavljali filter
+function filterPoGod() {
+  var godIgraca = document.getElementById("inputGod").value;
+  var noviFilterPoGod = data.filter(function (el) {
+    if (el.Godine <= godIgraca) return el;
+  });
+  podaciIgraca(noviFilterPoGod);
+}
 
 
-    var noviFIlterPoCeni = data.filter(function (el) {
-      if (el.Godine <= cena) return el;
+var listaPrvaPostava = [];
+function uzmiIgraca(e) {
+  if (e instanceof Event) {
+    e.preventDefault();
+
+    var idIgraca = this.getAttribute('data-id');
+    var uzetiIgraci = data.find(function (el) {
+      if ((el.Id == idIgraca)) {
+
+
+        return el;
+
+      } else return false;
     });
-    podaciIgraca(noviFIlterPoCeni);
-  }
-  var newn = [];
-  function dohvatiArtikal(e) {
-    if (e instanceof Event) {
-      e.preventDefault();
-      //evo je ovde fja prevent po default
-      // var korpaLink = this; //ovde smo dodeli objektu
-      var idArtikla = this.getAttribute('data-id');
-      var pronadjeniArtikal = data.find(function (el) {
-        if ((el.Id == idArtikla)) {
+    if (uzetiIgraci) {
 
+      listaPrvaPostava.push(uzetiIgraci);
+      //  console.log(uzetiIgraci);
+      var k = '';
 
-          return el;
-
-        } else return false;
-      });
-      if (pronadjeniArtikal) {
-
-        newn.push(pronadjeniArtikal);
-        //  console.log(pronadjeniArtikal);
-        var k = '';
-
-        newn.forEach(function (element) {
-          k += `<div class=" player d-flex flex-wrap">
+      listaPrvaPostava.forEach(function (element) {
+        k += `<div class=" player d-flex flex-wrap">
         <img src=${element.Slika} class="card-img-top" alt="...">
        <div class="cardPlayer"><p class="card-title">${element.Ime}</p>
         <p class="card-text">
@@ -101,91 +90,81 @@
       <span><strong>Datum rođenja :</strong> ${element.Datum}</span>
       <span><strong>Nastupi za Rezentaciju : </strong> U-15, U-17, U-19, Futsal A </span>
       <span><strong>Golova u sezoni :</strong> 9 </span>
-     
     </p></div>
     </div>`;
-        }); korpa.innerHTML = k;
-      }
-    } else { console.log("Ne postoji artikal sa definisanim id"); }
-  };
-
-  function sortirajMarke(e) {
-
-    e.preventDefault();
-    var d = data.sort(function (el1, el2) {
-
-      if (el1.Broj < el2.Broj) {
-        return -1;
-      }
-      if (el1.Broj > el2.Broj) {
-        return 1;
-      }
-
-      if (el1.Broj == el2.Broj) {
-        return 0;
-      }
-    });
-    podaciIgraca(d);
-  }
-
-  function sortirajMarkeAZ(e) {
-
-    e.preventDefault();
-    var dZ = data.sort(function (el1, el2) {
-
-      if (el1.Broj > el2.Broj) {
-        return -1;
-      }
-      if (el1.Broj < el2.Broj) {
-        return 1;
-      }
-
-      if (el1.Broj == el2.Broj) {
-        return 0;
-      }
-    });
-    podaciIgraca(dZ);
-  }
-
-  function filterModela(e) {
-    if (e instanceof Event) {
-      e.preventDefault();
-      var modelUnosa = this.value;
-      var noviNIz = data.filter(function (el) {
-        if (
-          data.Ime.toUpperCase().indexOf(modelUnosa.trim().toUpperCase() != -1)
-        ) {
-          return el;
-        }
-      });
-      podaciIgraca(noviNIz);
+      }); prvaPostava.innerHTML = k;
     }
-  }
+  } else { console.log("Ne postoji artikal sa definisanim id"); }
+};
 
-  function filterModelaPozicije(e) {
+function sortirajBrojeveAZ(e) {
+  e.preventDefault();
+  var d = data.sort(function (el1, el2) {
 
-    // if (e instanceof Event) {
-    //   e.preventDefault();
-    var modelPozicije = tbMOdelPoz.value;
-    var noviNIzP = data.filter(function (el) {
+    if (el1.Broj < el2.Broj) {
+      return -1;
+    }
+    if (el1.Broj > el2.Broj) {
+      return 1;
+    }
+    if (el1.Broj == el2.Broj) {
+      return 0;
+    }
+  });
+  podaciIgraca(d);
+}
+
+function sortirajBrojeveZA(e) {
+  e.preventDefault();
+  var dZ = data.sort(function (el1, el2) {
+    if (el1.Broj > el2.Broj) {
+      return -1;
+    }
+    if (el1.Broj < el2.Broj) {
+      return 1;
+    }
+    if (el1.Broj == el2.Broj) {
+      return 0;
+    }
+  });
+  podaciIgraca(dZ);
+}
+
+function filterImenaIgraca(e) {
+  if (e instanceof Event) {
+    e.preventDefault();
+    var imeIgracaVr = this.value;
+    var newNizIgracaIme = data.filter(function (el) {
       if (
-        data.Pozicija.toUpperCase().indexOf(modelPozicije.trim().toUpperCase() != -1)
+        el.Ime.toUpperCase().indexOf(imeIgracaVr.trim().toUpperCase() != -1)
       ) {
         return el;
       }
     });
-    podaciIgraca(noviNIzP);
-    // }
-
-
+    podaciIgraca(newNizIgracaIme);
   }
+}
 
-  tbMOdel.addEventListener('input', filterModela);
-  sortiraj.addEventListener("click", sortirajMarke);
-  sortirajAZ.addEventListener("click", sortirajMarkeAZ);
-  tbMOdelPoz.addEventListener('input', filterModelaPozicije);
-  btnCena.addEventListener('click', filterCena);
-  prikaziCenu.addEventListener('input', izmeniCenu);
+function filterPozicijeIgraca(e) {
+  e.preventDefault();
+  var pozIgracaVr = this.value;
+  var newNizIgracaPoz = data.filter(function (el) {
+    if (
+      el.Pozicija.toUpperCase().indexOf(pozIgracaVr.trim().toUpperCase() != -1)
+    ) {
+      return el;
+    }
+  });
+  podaciIgraca(newNizIgracaPoz);
+
+}
+
+imeIgraca.addEventListener('input', filterImenaIgraca);
+sortiraj.addEventListener("click", sortirajBrojeveAZ);
+sortirajZA.addEventListener("click", sortirajBrojeveZA);
+pozicijaIgraca.addEventListener('input', filterPozicijeIgraca);
+btnGodine.addEventListener('click', filterPoGod);
+prikaziInputGod.addEventListener('input', menjajGodine);
 
 
 

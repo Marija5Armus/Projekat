@@ -54,7 +54,7 @@
             <span>ZEMUN</span> ŽENSKI FUDBALSKI KLUB
           </h1>
         </div>
-        <div class="container">
+        <div class="">
           <nav>
             <div data-aos="fade-up" data-aos-delay="800">
               <ul class="nav">
@@ -83,8 +83,8 @@
         <div id="mobile_menu" class="hide my-2">
           <nav>
             <ul class="nav d-block">
-              <li class="  nav-item"><a class="nav-link" href="blog.html">Vesti</a></li>
-              <li class="active nav-item"><a class="nav-link" href="treninzi">Raspored Treninga</a></li>
+              <li class=" active nav-item"><a class=" nav-link" href="vesti"> Vesti</a></li>
+              <li class=" nav-item"><a class="nav-link" href="treninzi">Raspored Treninga</a></li>
               <li class="nav-item"><a class="nav-link" href="about">O nama (3) </a></li>
               <li class="nav-item"><a class="nav-link" href="sveForme"> <span>Sve forme(8)</span> </a></li>
               <li class="nav-item"><a class="nav-link" href="players">Tim (6)</a></li>
@@ -141,74 +141,145 @@
   <main>
     <div id="mainContainer">
 
+<section id="vesti">
+  <div class="col">
+    <fieldset>
+      <form name="forma" action="" method="get" onsubmit="return validacija(); popuniPodatke()">
+        <label for="iIme">Ime</label>
+        <input type="text" id="iIme" name="nIme" /> <br />
 
+        <label for="iDatRodj">Datum treninga: </label>
+        <input type="date" id="iDatRodj" name="nDatRodj" /> <br />
+        <label for="itimeRodj">Vreme treninga : </label>
+        <input type="time" id="itimeRodj" name="ntimeRodj" /> <br />
+        <hr>
+        <input type="submit" value="Posalji" />
+        <input type="reset" value="Ponisti" />
+        <input id="iPrikaz" type="button" value="postavi podatke" />
+      </form>
+    </fieldset>
+    <div id="proba" class="bg-info">
+      <p>vreme treninga: </p>
+    </div>
+  </div>
+</section>
 
       <section id="about" class="about back">
         <!-- <div class=""> -->
         <!-- <h4 data-aos="fade-up">O nama</h4> -->
-        <div class=" py-5 px-lg-5">
+
+        <div class="kocka"></div>
 
 
-          <div class="icon-box-about rounded-xl mx-0 my-3 col">
-            <h3><a href="">Istorijat kluba</a> </h3>
-
-            <div class="icon"> <i class="fas fa-battery-quarter"></i> </div>
-            <p>
-              Mi smo relativno mlad klub koji je osnovan jula 2017.godine. Takmičarski tim je sastavljen od igračica
-              starosti 15-17 godina.
-              Takmičenje 2017/18 započeo u Drugoj ligi Srbije za žene - grupa Sever. Sezona je završena
-              plasmanom na prvom mestu. Gol razlika 74/3. Iste godine je
-              osvojen Kup Beograda i plasman u ¼ finala Kup-a Srbije.
-            </p>
-          </div>
+        <h4><a href="">Istorijat kluba</a> </h4>
+        <h6>O nama</h6>
 
 
-          <div class="row mt-2 d-flex ">
+        <div class="row iconDescription d-flex flex-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="pOne col-10 col-lg-5 justify-content-center text-align-justify py-2">
 
-            <div class="icon-box col-lg-3 ">
-              <div class="icon "><i class=" fas fa-battery-full"></i></div>
-              <img src="assets/img/shoot/3Q4A5367.jpg" alt="">
-              <h5 class="title"><a href="">ŽFK Zemun danas</a></h5>
-              <p class="description">
-                U sastavu današnjeg seniorskog tima nalazi se nekolicina reprezentativki našeg nacionalnog tima u
-                fudbalu i futsalu. Takođe od avgusta 2020.godine sklopljena je saradnja sa Ženskim fudbalskim klubom
-                Rad u vidu naše filijale. Tu nastupaju igračice koje čine B ekipu našeg kluba. <br>
-                Pored ove dve ekipe koje se takmiče u Super ligi Srbije i Prvoj ligi Srbije za žene, naš klub takođe
-                stvara igrače pa tako imamo i mlađe selekcije koje se takmiče u drugoj ligi Beograda U-15. Takođe
-                radimo i sa najmlađima u okviru škole fudbala. <br>
-                Imamo prijatne i entuzijastične trenere koji rade sa našim devojkama i čiji rada nas je za tako
-                relativno kratko vreme i učinio ovako velikim i značajnim klubom. <br>
-              </p>
-            </div>
-
-            <div class="icon-box col-lg-3">
-              <div class="icon"><i class="fas fa-battery-half"></i></div>
-              <img src="assets/img/13243750_278493882484876_3224633045116712317_o.jpg" alt="">
-              <h5 class="title"><a href="">Sezona 2017/18</a></h5>
-              <p class="description">
-                Prosek godina prvog tima 2017/18 je 15.5.
-                Sve igračice su imale ispod 18 godina. <br>
-                Utakmice na domaćem terenu igraju se na gradskom stadionu u Zemunu. Tradicionalne boje kluba su plava,
-                zelena i žuta.
-                <br><br><br>
-                <!-- <h4><a href=""> Takmičenja:</a></h4>
-                <br>
-
+            Mi smo relativno mlad klub koji je osnovan jula 2017.godine. Takmičarski tim je sastavljen od igračica
+            starosti 15-17 godina.
+            Takmičenje 2017/18 započeo u Drugoj ligi Srbije za žene - grupa Sever. Sezona je završena
+            plasmanom na prvom mestu. Gol razlika 74/3. Iste godine je
+            osvojen Kup Beograda i plasman u ¼ finala Kup-a Srbije.
+            <br> <br>
+            <h4>
+              <p><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                  aria-controls="collapseExample">
+                  Takmičenja <i class="fas fa-arrow-circle-right"></i>
+                </a></p>
+            </h4>
+            <br>
+            <div class="collapse pOne" id="collapseExample">
+              <div class="card card-body">
                 Fudbalski savez Srbije Super Liga – žene <br>
                 Fudbalski savez Srbije Prva Liga - žene <br>
                 Kup Fudbalskog Saveza Beograda <br>
                 Mini Maxi Liga <br>
                 Kup Fudbalskog Saveza Srbije <br> <br>
-                Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija -->
-              </p>
+                Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija
+
+              </div>
             </div>
 
-            <div class="icon-box col-lg-3">
-              <div class="icon"><i class="fas fa-battery-three-quarters"></i></div>
-              <img src="assets/img/pljevlja.jpg" alt="">
-              <h5 class="title"><a href="">Sezona 2018/19</a></h5>
-              <p class="description">
 
+
+
+
+
+            <div class="osvojena">
+
+            </div>
+
+          </div>
+          <div class=" col-10 col-lg-6 pTwo">
+            <img src="assets/img/shoot/3Q4A5367.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="d-flex aboutTrio flex-wrap rounded-xl mx-0 my-3 row" data-aos="fade-up" data-aos-delay="200">
+
+
+          <div class="icon-box col-10 col-lg-3 ">
+
+            <img src="assets/img/shoot/3Q4A2884.jpg" alt="">
+            <h5 class="title">
+              <p><a data-toggle="collapse" href="#pOne" role="button" aria-expanded="false"
+                  aria-controls="collapseExample">
+                  Zemun danas <i class="fas fa-arrow-circle-right"></i>
+                </a></p>
+            </h5>
+
+            <div class="collapse pOne" id="pOne">
+              <div class="card card-body">
+                <p class="iconDescription">
+                  U sastavu današnjeg seniorskog tima nalazi se nekolicina reprezentativki našeg nacionalnog tima u
+                  fudbalu i futsalu. Takođe od avgusta 2020.godine sklopljena je saradnja sa Ženskim fudbalskim klubom
+                  Rad u vidu naše filijale. Tu nastupaju igračice koje čine B ekipu našeg kluba. <br>
+                  Pored ove dve ekipe koje se takmiče u Super ligi Srbije i Prvoj ligi Srbije za žene, naš klub takođe
+                  stvara igrače pa tako imamo i mlađe selekcije koje se takmiče u drugoj ligi Beograda U-15. Takođe
+                  radimo i sa najmlađima u okviru škole fudbala. <br>
+                  Imamo prijatne i entuzijastične trenere koji rade sa našim devojkama i čiji rada nas je za tako
+                  relativno kratko vreme i učinio ovako velikim i značajnim klubom. <br>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="icon-box col-10 col-lg-3">
+
+
+            <h5 class="title"><a data-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="collapseExample" href="#pThree">Sezona 2017/18 <i
+                  class="fas fa-arrow-circle-right"></i></a></h5>
+
+
+            <div class="collapse iconDescription" id="pThree">
+              <div class="card card-body">
+                Prosek godina prvog tima 2017/18 je 15.5.
+                Sve igračice su imale ispod 18 godina. <br>
+                Utakmice na domaćem terenu igraju se na gradskom stadionu u Zemunu. Tradicionalne boje kluba su plava,
+                zelena i žuta.
+                <br><br><br>
+                </p>
+              </div>
+            </div>
+            <img src="assets/img/13243750_278493882484876_3224633045116712317_o.jpg" alt="">
+          </div>
+
+          <div class="icon-box col-10 col-lg-3">
+
+            <img src="assets/img/pljevlja.jpg" alt="">
+            <h5 class="title"><a data-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="collapseExample" href="#pFour">Sezona 2018/19 <i
+                  class="fas fa-arrow-circle-right"></i></a></h5>
+
+
+            <div class=" collapse iconDescription" id="pFour">
+              <div class="card card-body">
                 Naredne sezone 2018/19 takmičimo se u Prvoj ligi Srbije za žene. Sezona je završena titulom prvaka i
                 gol razlikom 80/13.
                 Osvojen je Kup Beograda i ostvarili smo plasman u ¼ finala Kupa Srbije.
@@ -218,12 +289,10 @@
                 ispod 18 godina.
                 <br>
                 Sezone 2018/19 čak 15 naših igračica uzelo je učešće u raznim selekcijama reprezentacije Srbije.
-              </p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- </div> -->
       </section>
 
       <section id="club">
@@ -306,22 +375,22 @@
 
 
 
-          <!-- <div>
-   <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+                  <!-- <div>
+                 <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen> videos neki</iframe>
               <p> aaaaa</p>
               <button> Neki </button>
-</div> -->
-          <!--
-           <div>
+                  </div> -->
+                <!--
+                 <div>
               <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
 
-           </div>
+                </div>
 
            
             <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
@@ -377,7 +446,7 @@
           <div id="videosCont" class="d-block row pregled d-lg-flex flex-wrap">
 
           </div>
-         
+
 
 
         </div>
@@ -387,25 +456,135 @@
 
       <section id="details">
 
-        <div class="details back">
-          <div class="row d-lg-flex d-block">
-            <div class="poster" data-aos="fade-up">
+        <div class="details back poster">
+          <h4>Rezultati sa učešća na turnirima </h4>
+          <div id="accordionT">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-lg btn-link" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    2016
+                  </button>
+                </h5>
+              </div>
 
-              <h4>Takmičenja </h4>
-              <div class="col-md-3 mr-0">
-                <p class="details-text">
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionT">
+                <div class="card-body">
+                  2016. VIII međunarodni turnir “Deda Mlađa Mitrović” Beogard - I mesto <br>
+                  2016. Međunarodni turnir prijateljstva “Pljevlja 2016” (Crna Gora) - III mesto <br>
+                  2016. Međunarodni turnir “Prijedor 2016” (BIH) - I mesto <br>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+                    2017
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionT">
+                <div class="card-body">
+                  2017. Božićni turnir (ŽFK Jedinstvo) Dubovac - I mesto <br>
+                  2017. Međunarodni turnir za devojčice “Požega” - I mesto <br>
+                  2017. Međunarodni turnir Fragaria Cup - Prešov (Slovačka) - I mesto <br>
+                  2017. Međunarodni turnir prijateljstva "Pljevlja 2017” (Crna Gora) - I mesto <br>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThhree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="false" aria-controls="collapseThree">
+                    2018
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThhree" data-parent="#accordionT">
+                <div class="card-body">
+                  2018. Memorijalni turnir “Deda Mlađa Mitrović” Beograd - I mesto <br>
+                  2018. Međunarodni turnir "Puldin Cup" - Plovdiv (Bugarska) - I mesto <br>
+                  2018. Međunarodni turnir prijateljstva “Pljevlja 2018” (Cna Gora) - I mesto <br>
+                  2018. Međunarodni turnir “Levač” Rekovac - I mesto <br>
+                  2018. Memorijalni turnir posvećen žrtvama bombardovanja Batajnica - I mesto <br>
+                  2018. Međunarodni turnir "Cupa Laura Rus” (Rumunija) - I mesto <br>
+                </div>
+              </div>
+            </div>
 
-                  Fudbalski savez Srbije Super Liga – žene <br>
-                  Fudbalski savez Srbije Prva Liga - žene <br>
-                  Kup Fudbalskog Saveza Beograda <br>
-                  Mini Maxi Liga <br>
-                  Razvojna Liga U-15 <br>
-                  Kup Fudbalskog Saveza Srbije <br> <br>
-                  Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija
-                </p>
+
+
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                    aria-expanded="false" aria-controls="collapseFour">
+                    2019
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionT">
+                <div class="card-body">
+                  2019. III Međunarodni turnir “Trofej Levač Rekovac”- I mesto <br>
+                  2019. VI Međunarodni turnir prijateljstva “Pljevlja 2018” (Cna Gora) - I mesto <br>
+                  2019. Međunarodni turnir "Cupa Laura Rus” (Rumunija) - I mesto <br>
+                  2019. Međunarodni turnir “Majdanpek 2019”- I mesto <br>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                    aria-expanded="false" aria-controls="collapseFive">
+                    2020
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionT">
+                <div class="card-body">
+                  2020. IV Međunarodni turnir “Trofej Levač Rekovac”- I mesto <br>
+                  .....
+
+                </div>
               </div>
             </div>
           </div>
+
+
+
+          <!-- </div>
+
+        </div> -->
+          <!-- <div class="col-10 col-lg-4">
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
+                  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%"
+                  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div> -->
+          <!-- </div> -->
         </div>
 
       </section>
@@ -413,33 +592,7 @@
       <section id="treninzi" class="back">
         <div class="row d-block ">
           <!-- <h1> raspored treninga</h1> -->
-          <div class="col">
-            <fieldset>
-              <form name="forma" action="" method="get" onsubmit="return validacija(); popuniPodatke()">
-                <label for="iIme">Ime</label>
-                <input type="text" id="iIme" name="nIme" /> <br />
-
-                <label for="iDatRodj">Datum tre</label>
-                <input type="date" id="iDatRodj" name="nDatRodj" /> <br />
-                <label for="itimeRodj">Vreme tre</label>
-                <input type="time" id="itimeRodj" name="ntimeRodj" /> <br />
-                <hr>
-                <input type="submit" value="Posalji" />
-                <input type="reset" value="Ponisti" />
-                <input id="iPrikaz" type="button" value="postavi podatke" />
-              </form>
-            </fieldset>
-            <div id="proba" class="bg-info">
-              <p>vreme tre</p>
-            </div>
-          </div>
-          <div>
-          </div>
-
-
-
-
-
+         
 
           <div mbsc-page class="demo-add-delete-event">
             <div style="height:100%">
@@ -519,18 +672,23 @@
       <section id="tableRez" class="back">
         <div class="back">
           <div class="poster">
-            <div class="col-10 offset-1 ">
-              <h2 class="d-4 title-1 m-4"> Tabela rasporeda i rezultata utakmice</h2>
-              <h6 class="d-4 title-2 m-1"> Sezona 2020/21</h6>
-              <div class="py-2 my-2">
-                <button class="btn btn-sm w-20 btn-info"> <a href="pregled-tabele" class="rez">Rezultati</a> </button>
-                <button class="btn btn-sm w-20 btn-info"><a href="dodaj-u-tabelu" class="rez">Dodaj
+            <div class="row d-flex ">
+              <!-- <h2 class="d-4 title-1 m-4"> Tabela rasporeda i rezultata utakmice</h2> -->
+
+              <div class=" d-block my-2">
+                <button class="btn my-2 btn-sm w-20 btn-success btn-outline">
+                  <h6>Sezona 2020/21</h6>
+                </button>
+                <button class="btn btn-sm w-20 btn-warning btn-outline"> <a href="pregled-tabele"
+                    class="rez">Rezultati</a> </button>
+                <button class="btn btn-sm w-20 btn-warning btn-outline"><a href="dodaj-u-tabelu" class="rez">Dodaj
                     utakmice</a></button>
-                <button class="btn btn-sm w-20 btn-info"><a href="https://fss.rs/takmicenje/super-liga-z-20-21/"
-                    class=""> Pregled celokupne tabele SUPER LIGE SRBIJE </a></button>
+                <button class="btn btn-sm w-20 btn-outline btn-warning"><a
+                    href="https://fss.rs/takmicenje/super-liga-z-20-21/" class=""> Pregled celokupne tabele SUPER LIGE
+                    SRBIJE </a></button>
               </div>
-              <div class="row  pregled" id="pregled-tabele">
-                <div class="col-8 offset-2 ">
+              <div class="col-10  pregled" id="pregled-tabele">
+                <div class="col-10 offset-2 ">
                   <table class="table table-striped">
                     <thead class="thead-dark">
                       <tr>
@@ -553,7 +711,7 @@
               </div>
 
               <div class="row  pregled" id="dodaj-u-tabelu">
-                <div class="col-8 offset-2">
+                <div class="col-10 offset-2">
 
                   <input type="text" placeholder="kolo" class='form-control '> <br>
                   <input type="text" placeholder="datum" class='form-control '> <br>
@@ -569,7 +727,7 @@
 
 
               <div class="row  pregled" id="izmeni-iz-tabele">
-                <div class="col-8 offset-2">
+                <div class="col-10 offset-2">
 
                   <input type="text" class='form-control eKolo'> <br>
                   <input type="text" class='form-control eDatum'> <br>
@@ -592,30 +750,33 @@
         <div class=" players back">
           <div class="row">
             <div class="col">
-              <button> Rezultati</button> <button> Lista strelaca</button>
+              <!-- <button> Rezultati</button> <button> Lista strelaca</button> -->
 
               <div id="filteri">
                 <!-- Filtriranje -->
                 <div id="filtriranje">
-                  <label for="sortMarka">1-28 </label>
-                  <input type="button" name="dugme" id="sortMarka" value="Sortiraj artikle" /><br /><br />
-                  <label for="sortMarkaAZ">28-1 </label>
-                  <input type="button" name="dugmeAZ" id="sortMarkaAZ" value="Sortiraj artikle" /><br /><br />
-                  <!-- <form action="" method=""> -->
-                  <label for="tbNaslov">Pronadji model po imenu: </label>
-                  <input type="text" id="tbDeoModel" name="tbDeoModel" placeholder="Podudaranje po delu" />
-                  <!-- </form> -->
+
+                  <label for="sortBrojevaAZ"><i class="fas fa-sort-numeric-down"></i></label>
+                  <input type="button" name="dugme" id="sortBrojevaAZ" value="Sortiraj Igrače" />
+                  <label for="sortBrojevaZA"><i class="fas fa-sort-numeric-up-alt"></i></label>
+                  <input type="button" name="dugmeAZ" id="sortBrojevaZA" value="Sortiraj Igrače" /> <br>
+                 
+                  <form action="" method="">
+                  <label for="imeIgraca">Pronadji po imenu: </label>
+                  <input type="text" id="imeIgraca" name="imeIgraca" placeholder="Podudaranje po Imenu" />
+                  </form>
+
                   <br />
                   <!-- <form action="" method=""> -->
-                  <label for="tbDeoModelPoz">Pronadji po poziciji: </label>
-                  <input type="text" id="tbDeoModelPoz" name="tbDeoModelPoz" placeholder="Podudaranje po poziciji" />
+                  <label for="pozIgraca">Pronadji po poziciji: </label>
+                  <input type="text" id="pozIgraca" name="pozIgraca" placeholder="Podudaranje po poziciji" />
                   <!-- </form> -->
                   <br />
-                  <!-- <form action="" method=""> -->
-                  <label for="rnCena">Cena u opsegu od 0 do <span id="cenaIzbor">35</span>: </label>
-                  <input type="range" min="0" max="35" value="20" id="rnCena" /><br /><br />
-                  <input type="button" name="dugme" id="btnCena" value="Pronadji artikal" /><br /><br />
-                  <!-- </form> -->
+                
+                  <label for="inputGod">Igrači u opsegu godina od 15 do <span id="godIzbor">35</span>: </label>
+                  <input type="range" min="15" max="35"   id="inputGod" /><br /><br />
+                  <input type="button" name="dugme" id="btnGodine" value="Pronađi po godinama" /><br /><br />
+              
                 </div>
               </div>
             </div>
@@ -697,7 +858,7 @@
           </div>
           <div>
             <h6>Lista igraca za naredno kolo</h6>
-            <div id="korpa" class="row d-block d-md-flex flex-wrap">
+            <div id="prvaPostava" class="row d-block d-md-flex flex-wrap">
 
 
             </div>
@@ -1287,56 +1448,56 @@
 
     <!-- main -->
     <!-- sponzori -->
-    <div id="partneriKluba" class="back prva">
-      <div class="row d-flex flex-wrap">
-        <div class="logo"><img src="./assets/img/sponzori/Always-Logo.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/djokovic.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/kodeks.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/mrky.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/john.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/akademija.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/naai.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/sportnet.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/dzo.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/sandic.png" alt=""></div>
-        <div class="logo"><img src="./assets/img/sponzori/su.png" alt=""></div>
+    <div id="partneriKluba" class="back row prva">
+      <!-- <div class=" d-flex flex-wrap"> -->
+      <div class="logo d-flex flex-wrap">
+
+
+        <a href=""> <img src="./assets/img/sponzori/Always-Logo.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/djokovic.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/kodeks.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/mrky.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/john.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/akademija.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/naai.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/sportnet.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/dzo.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/sandic.png" alt=""></a>
+        <a href=""><img src="./assets/img/sponzori/su.png" alt=""></a>
       </div>
+      <!-- </div> -->
     </div>
     <!-- sponzori -->
 
   </main>
-<!-- main -->
-<!-- footer -->
+  <!-- main -->
+  <!-- footer -->
   <footer>
     <div class="container-footer d-block d-md-flex flex-wrap">
 
       <div class="col footer-contact">
-        <h4>Kontakt informacije : </h4>
+        <h5> Informacije | Uplate | Kontakt  </h5>
         <p>
           Ugrinovački put 157e <br />
           Zemun 11080, Beograd<br />
           Srbija<br /><br />
+          P I B : 1 0 1 5 4 4 7 0 <br>
+          M B : 1 7 4 1 5 5 7 3 <br>
+          Žiroračun : 250-1250000015060-80br
+
+           EurobankEFG    <br>
           <strong>Telefon:</strong> +381 64 11 33 130<br />
           <strong>Telefon:</strong> +381 63 301 872<br />
           <strong>Email:</strong> zfk.zemun@gmail.com <br />
         </p>
         <br>
-        <p>
-          Budite u korak sa nama, zapratite nas na društvenim mrežama
-        </p>
-
-
-        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i>www.instagram/com/zfkzemun/</a> <br>
-        <a href="#" class="instagram">
-          <i class="fab fa-instagram"></i> www.facebook/zfkzemun/</a> <br>
-        <a href="#" class="viber"> <i class="fab fa-viber"></i>Jasmina: +381 63 301 872</a>
-
+      
 
       </div>
 
 
       <div class="col footer-map">
-        <h4>Mi ovde treniramo: </h4>
+        <h5>Mi ovde treniramo </h5>
         <div class="col d-block">
           <div class="mapouter responsive">
             <div class="gmap_canvas responsive">
@@ -1371,7 +1532,7 @@
 
       <div class="col footer-links">
 
-        <h4>Korisni linkovi</h4>
+        <h5>Korisni linkovi</h5>
         <p> <i class="fas fa-angle-double-right"></i>
           <a href="https://fss.rs/">Fudbalski savez Srbije</a></p>
 
@@ -1386,7 +1547,17 @@
 
         <p><i class="fas fa-angle-double-right"></i>
           <a href="http://www.fsb.org.rs/vesti">Fudbalski savez Beograda</a></p>
-
+          <p>
+            Budite u korak sa nama, zapratite nas na društvenim mrežama
+          </p>
+  
+  
+          <a href="https://www.facebook.com/zfkzemun" class="facebook">
+            <i class="fab fa-facebook-f"></i>www.facebook/zfkzemun/</a> <br>
+          <a href="https://www.instagram.com/zfkzemun/" class="instagram">
+            <i class="fab fa-instagram"></i> www.insagram/com/zfkzemun/</a> <br>
+          <a href="#" class="viber"> <i class="fab fa-viber"></i>Jasmina: +381 63 301 872</a>
+  
       </div>
 
     </div>
@@ -1405,7 +1576,7 @@
   <!-- end -->
   <!-- back to top -->
   <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
- <!-- back to top -->
+  <!-- back to top -->
   <script>
     AOS.init();
   </script>
@@ -1424,14 +1595,18 @@
   <script type="text/javascript" src="slick/slick.min.js"></script> -->
   <script src="./assets/js/mobiscroll.javascript.min.js"></script>
   <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/login.js"></script>
   <script src="./assets/js/tableGames.js"></script>
   <script src="./assets/js/players.js"></script>
   <script src="./assets/js/kids.js"></script>
   <script src="./assets/js/member.js"></script>
   <script src="./assets/js/videoGallery.js"></script>
+  <script src="./assets/js/mobileMenu.js"></script>
+
   <script src="./assets/js/app.js"></script>
   <script src="./assets/js/mobiscroll.javascript.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
+
 </html>

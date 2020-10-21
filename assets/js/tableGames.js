@@ -49,7 +49,7 @@
     <td>:</td>
     <td>${game.golG}</td>
     <td>${game.gost}</td>
-    <td> <button data-id="${i}" class="upisiRezBtn form-control btn btn-sm btn-succes">Upiši rezultat </button></td>
+    <td> <button data-id="${i}" class="upisiRezBtn form-control btn btn-sm btn-success">Upiši rezultat </button></td>
     <td> <button data-id="${i}" class="obrisiRezBtn form-control btn btn-sm btn-warning"> Obriši utakmicu </button></td>
     </tr>`;
 

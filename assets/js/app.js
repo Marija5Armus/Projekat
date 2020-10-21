@@ -4,176 +4,7 @@ window.onload = function () {
 
   AOS.init();
 
-  var mmenu = document.querySelector('.bars');
-  mmenu.addEventListener('click', dajMeni);
-  function dajMeni() {
-    document.querySelector('#mobile_menu').classList.toggle('hide');
-  }
-
-
-
-  var korisnik = {};
-  var korisnici = [];
-  var ulogovan_kor = {};
-  var ulogovan_korisnik = JSON.parse(localStorage.getItem("ulogovan"));
-  var registruj = document.getElementById("reg");
-  var uloguj = document.getElementById("log");
-  var ulogovan = document.getElementById("ulog");
-  var izloguj = document.getElementById("izlog");
-
-
-  if (ulogovan_korisnik != null)
-    if (ulogovan_korisnik.kor_ime != null) {
-      registruj.setAttribute('class', "obrisi");
-      uloguj.setAttribute('class', "obrisi");
-      ulogovan.setAttribute('class', "dugme");
-      ulogovan.textContent = ulogovan_korisnik.kor_ime;
-      izloguj.setAttribute('class', "dugme");
-    }
-  izloguj.addEventListener('click', function () {
-    var odgovor = window.confirm("Da li ste sigurni?");
-    if (odgovor == false) { return; }
-    var prazan = {};
-    localStorage.setItem("ulogovan", JSON.stringify(prazan));
-    window.location.reload();
-  })
-
-  uloguj.addEventListener('click', function () {
-    var x = dohvati();
-    if (x == null) { window.alert("Nema registrovanih korisnika!"); }
-    else {
-      document.getElementById('admin_reg').setAttribute('class', "obrisi");
-      var f = document.getElementById('admin_log');
-      if (f.getAttribute('class') == "form-group") {
-        f.setAttribute('class', "obrisi");
-      }
-      else if (f.getAttribute('class') == "obrisi") {
-        f.setAttribute('class', "form-group");
-      }
-      f.onsubmit = function () {
-        var greska = document.querySelector("#greska");
-        var kor_ime = document.querySelector("#admin_log_id").value.trim();
-        var pass = document.querySelector("#admin_log_pass").value.trim();
-        for (i = 0; i < x.length; i++)
-          if (x[i].kor_ime == kor_ime) {
-            if (x[i].kor_ime == kor_ime && x[i].password == pass) {
-              ulogovan_kor.kor_ime = kor_ime;
-              ulogovan_kor.password = pass;
-              localStorage.setItem("ulogovan", JSON.stringify(ulogovan_kor));
-              return;
-            }
-            else if (x[i].kor_ime == kor_ime && x[i].password != pass) {
-              greska.textContent = "Neispravna lozinka!";
-              return false;
-            }
-          }
-        greska.textContent = "Nepostojeće korisničko ime!";
-        return false;
-      }
-      f.onreset = function () {
-        var odgovor = window.confirm("Da li zelite da odustanete?");
-        if (odgovor == false) {
-          return false;
-        }
-        window.location.reload();
-      }
-    }
-  });
-
-  registruj.addEventListener('click', function () {
-    document.getElementById('admin_log').setAttribute('class', "obrisi");
-    var f = document.getElementById('admin_reg');
-    if (f.getAttribute('class') == "form-group") {
-      f.setAttribute('class', "obrisi");
-    }
-    else if (f.getAttribute('class') == "obrisi") {
-      f.setAttribute('class', "form-group");
-    }
-    f.onsubmit = function () {
-      var greska = document.querySelector("#greska1");
-
-      // KORISNIČKO IME
-      var kor_ime = document.querySelector("#admin_reg_id").value.trim();
-      var kor_ime1 = kor_ime.split("");
-      if (kor_ime == "") {
-        greska.textContent = "Niste uneli korisničko ime!";
-        return false;
-      }
-      if (kor_ime.length < 3) {
-        greska.textContent = "Korisničko ime mora sadržati bar 3 karaktera";
-        return false;
-      }
-      for (i = 0; i < kor_ime1.length; i++)
-        if (kor_ime1[i].toUpperCase() == kor_ime1[i].toLowerCase() && (kor_ime1[i] < "0" || kor_ime1[i] > "9")) {
-          greska.textContent = "Neispravna vrednost! Korisničko ime može saržati samo slova i brojeve!";
-          return false;
-        }
-      var k = dohvati();
-      if (k != null) {
-        for (i = 0; i < k.length; i++) {
-          if (k[i].kor_ime == kor_ime) {
-            greska.textContent = "Korisničko ime je zauzeto! Izaberite neko drugo!";
-            return false;
-          }
-        }
-      }
-      var pass = document.querySelector("#admin_reg_pass").value.trim();
-      var pass1 = pass.split("");
-      if (pass == "") {
-        greska.textContent = "Niste uneli lozinku!";
-        return false;
-      }
-      if (pass.includes(" ")) {
-        greska.textContent = "Neispravna vrednost! Lozinka ne sme sadržati razmak!";
-        return false;
-      }
-      if (pass.length < 8) {
-        greska.textContent = "Lozinka mora sadržati bar 8 karaktera!";
-        return false;
-      }
-      var broj = 0;
-      var velika = 0;
-      var mala = 0;
-      for (i = 0; i < pass1.length; i++) {
-        if (pass1[i] >= "0" && pass1[i] <= "9") { broj++; }
-        else if (pass1[i].toUpperCase() == pass1[i] && pass1[i].toLowerCase() != pass1[i]) { velika++; }
-        else if (pass1[i].toUpperCase() != pass1[i] && pass1[i].toLowerCase() == pass1[i]) { mala++; }
-      }
-      if (velika == 0 || mala == 0 || (broj == 0)) {
-        greska.textContent = "Neispravna vrednost! Lozinka mora sadržati bar po jedno: veliko slovo, malo slovo i broj!";
-        return false;
-      }
-
-      // SMESTANJE KORISNIKA
-
-      korisnik.kor_ime = kor_ime;
-      korisnik.password = pass;
-      if (k != null) {
-        console.log(k);
-        k.push(korisnik);
-        smesti = JSON.stringify(k);
-      } else {
-        korisnici.push(korisnik);
-        smesti = JSON.stringify(korisnici);
-      }
-      localStorage.setItem("korisnici", smesti);
-    }
-
-    f.onreset = function () {
-      var odgovor = window.confirm("Da li zelite da odustanete?");
-      if (odgovor == false) {
-        return false;
-      }
-      window.location.reload();
-    }
-  });
-
-
-  function dohvati() {
-    var dohvati = localStorage.getItem("korisnici");
-    var k = JSON.parse(dohvati);
-    return k;
-  }
+ 
 
 
   /* TAJMER ZA TREE*/
@@ -391,64 +222,59 @@ window.onload = function () {
 
   // MOJ TAJMER ZA TRE RUCNI
 
-  // function makeTimer() {
-  //   //var tajm=document.getElementById('itimeRodj').value;
-  //   // var endTime = new Date("October 10, 2020 17:00:00 PDT");
-  //   var endTime = new Date(document.forma.ntimeRodj.value);
-  //   var endTime = (Date.parse(endTime)) / 1000;
+  function makeTimer() {
+    //var tajm=document.getElementById('itimeRodj').value;
+    var endTime = new Date("October 10, 2020 17:00:00 PDT");
+    var endTime = new Date(document.forma.ntimeRodj.value);
+    var endTime = (Date.parse(endTime)) / 1000;
 
-  //   var now = new Date();
-  //   var now = (Date.parse(now) / 1000);
+    var now = new Date();
+    var now = (Date.parse(now) / 1000);
 
-  //   var timeLeft = endTime - now;
+    var timeLeft = endTime - now;
 
-  //   var days = Math.floor(timeLeft / 86400);
-  //   var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-  //   var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
-  //   var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    var days = Math.floor(timeLeft / 86400);
+    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
 
-  //   if (hours < "10") { hours = "0" + hours; }
-  //   if (minutes < "10") { minutes = "0" + minutes; }
-  //   if (seconds < "10") { seconds = "0" + seconds; }
+    if (hours < "10") { hours = "0" + hours; }
+    if (minutes < "10") { minutes = "0" + minutes; }
+    if (seconds < "10") { seconds = "0" + seconds; }
 
-  //   $("#days").html(days + "<span>Days</span>");
-  //   $("#hours").html(hours + "<span>Hours</span>");
-  //   $("#minutes").html(minutes + "<span>Minutes</span>");
-  //   $("#seconds").html(seconds + "<span>Seconds</span>");
+    $("#days").html(days + "<span>Days</span>");
+    $("#hours").html(hours + "<span>Hours</span>");
+    $("#minutes").html(minutes + "<span>Minutes</span>");
+    $("#seconds").html(seconds + "<span>Seconds</span>");
 
-  // }
+  }
 
-  // setInterval(function () { makeTimer(); }, 1000);
+  setInterval(function () { makeTimer(); }, 1000);
 
 
   // MANIPULACIJA SEKCIJAA
   // let mainCont=document.getElementById('mainContainer');
 
+  var mS = document.querySelector('#mainContainer');
+  mS.style.display='none';
   var allLinks = document.querySelectorAll('.nav-link');
-
   var section = document.getElementsByTagName('SECTION');
-  var prvaSekcija = document.getElementById('prvaSekcija');
-
+  // var prvaSekcija = document.getElementById('prvaSekcija');
   for (let i = 0; i < allLinks.length; i++) {
     allLinks[i].addEventListener('click', showView);
-
   }
-
-  function showView(e) {
-    prvaSekcija.style.display = 'none';
+  function showView(e) { 
     e.preventDefault();
-
+mS.style.display='block';
     for (let j = 0; j < section.length; j++) {
       section[j].style.display = 'none';
-
     }
     var idSekcije = `#${this.getAttribute("href")}`;
     document.querySelector(idSekcije).style.display = 'block';
-    if (idSekcije == 'prvaSekcija') {
-      // prvaSekcija.style.display='block';
-    }
-
   }
+
+
+
 
 
 
@@ -456,7 +282,6 @@ window.onload = function () {
 
 
 }
-
 
 
 
