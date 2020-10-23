@@ -187,84 +187,84 @@ prikaziInputGod.addEventListener('input', menjajGodine);
 
 
 
-// var ime = document.querySelector('player_name');
-// var prezime = document.querySelector('player_surname');
-// var datumRodj = document.querySelector('player_date');
-// var pozicija = document.querySelector('player_position');
+var ime = document.querySelector('player_name');
+var prezime = document.querySelector('player_surname');
+var datumRodj = document.querySelector('player_date');
+var pozicija = document.querySelector('player_position');
 
 
 
-// function previewFiles() {
+function previewFiles() {
 
-//   var preview = document.querySelector('#previewImg');
-//   var files = document.querySelector('input[type=file]').files;
+  var preview = document.querySelector('#previewImg');
+  var files = document.querySelector('input[type=file]').files;
 
-//   function readAndPreview(file) {
+  function readAndPreview(file) {
 
-//     // Make sure `file.name` matches our extensions criteria
-//     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-//       var reader = new FileReader();
+    // Make sure `file.name` matches our extensions criteria
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+      var reader = new FileReader();
 
-//       reader.addEventListener("input", function () {
+      reader.addEventListener("load", function () {
 
-//         var image = new Image();
-//         image.height = 100;
-//         image.width = 100;
-//         image.title = file.name;
-//         image.src = this.result;
+        var image = new Image();
+        image.height = 100;
+        
+        image.title = file.name;
+        image.src = this.result;
 
-//         preview.appendChild(image);
-//       }, false);
+        preview.appendChild(image);
+      }, false);
 
-//       reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
 
-//     }
+    }
 
-//   }
+  }
 
-//   if (files) {
-//     [].forEach.call(files, readAndPreview);
-//   }
-//   var slIgracaSrc = image.src;
-//   return slIgracaSrc;
+  if (files) {
+    [].forEach.call(files, readAndPreview);
+  }
+  var slIgracaSrc = image.src;
+  return slIgracaSrc;
 
-// }
+}
 
-// document.getElementById('browse').addEventListener('change', previewFiles);
-
-
-// var t = 1;
-// document.getElementById('savePlayer').addEventListener('click', sacuvajIgraca);
-// function dodeliId() {
-//   t = t + 2;
-//   return t;
-// }
+document.getElementById('browse').addEventListener('change', previewFiles);
 
 
-// function vratiGodine() {
-//   return a = (new Date().getFullYear) - parseInt(datumRodj.value.trim().split('-')[2]);
-// }
+var t = 1;
+document.getElementById('savePlayer').addEventListener('click', sacuvajIgraca);
+function dodeliId() {
+  t = t + 2;
+  return t;
+}
 
-// function sacuvajIgraca() {
 
-//   e.preventDefault();
+function vratiGodine() {
+  return a = (new Date().getFullYear) - parseInt(datumRodj.value.trim().split('-')[2]);
+}
 
+function sacuvajIgraca() {
 
+  e.preventDefault();
 
 
 
 
-//   const player = {
-//     Id: dodeliId(),
-//     Slika: previewFiles(),
-//     Ime: ime.value + " " + prezime.value,
-//     Broj: broj.value,
-//     Pozicija: pozicija.value,
-//     Datum: datumRodj.value,
-//     Godine: vratiGodine()
-//   };
 
-//   data.push(player);
-// };
 
-  //console.log(games);
+  const player = {
+    Id: dodeliId(),
+    Slika: previewFiles(),
+    Ime: ime.value + " " + prezime.value,
+    Broj: broj.value,
+    Pozicija: pozicija.value,
+    Datum: datumRodj.value,
+    Godine: vratiGodine()
+  };
+ console.log(player);
+  // data.push(player);
+};
+
+ 

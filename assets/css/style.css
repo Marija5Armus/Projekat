@@ -304,6 +304,12 @@ nav  ul li a:hover {
    box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.075); 
   
 }
+.okvirSlika{
+  overflow: hidden;
+  width: 10vw;
+   height: 10vh;
+   justify-content: center;
+}
 nav ul li a{
   /* background-color: rgba(220, 214, 58, 0.443); */
   background-color: #9b77690c;

@@ -212,6 +212,7 @@
     console.log(pravoKrajnjeVreme);
 
     document.getElementById("proba").innerHTML = pravoKrajnjeVreme;
+    var sacuvajZadnjiTre=pravoKrajnjeVreme;
 
 
     ubaciTre(pravoKrajnjeVreme);
@@ -222,7 +223,8 @@
 
 
 
-
+// const zadnjeVreme=sacuvajZadnjiTre;
+// console.log('zadnje vreme'+zadnjeVreme);
 
   function tajmer() {
   
