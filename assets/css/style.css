@@ -28,37 +28,39 @@
   scroll-behavior: smooth;
 }
 
-
+.admin{
+  visibility: hidden;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
-#days {
-  font-size: 50px;
+#dani {
+  font-size: 40px;
   color: var(--club-color);
 }
-#hours {
-  font-size: 40px;
+#sati {
+  font-size: 60px;
   color: var(--club2-color);
 }
-#minutes {
-  font-size: 40px;
+#minuti {
+  font-size: 30px;
   color: #9b7769;
 }
-#seconds {
+#sekunde {
   font-size: 25px;
-  color: #252525;
+  color: #d1da2e;
 }
 
 .timer> div {
   display: inline-block;
   line-height: 1;
-  padding: 20px;
-  font-size:20 px;
+  padding: 10vh;
+  font-size:20 vh;
 }
 
 .timer > span {
   display: block;
-  font-size: 10px;
+  font-size: 10pvh;
   color: white;
 }
 
@@ -66,7 +68,10 @@
   text-align: center;
   font-family: 'Covered By Your Grace', cursive;
   color: white;
-  background: var(--club3-color);
+  height: 40vh;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(10, 15, 41, 0.667);
+
 }
 
 
@@ -117,7 +122,7 @@ ul {
 li {
   border-radius: 1px;
   box-shadow: var(--club3-color);
-  border-right: #9b7769 1px solid;
+  /* border-right: #9b7769 1px solid; */
 }
 
 p {
@@ -257,9 +262,7 @@ h1 > span {
   margin: 0 auto;
   
 }
- /* .logo:hover{
-   background-color: var(--club3-color);
- } */
+ 
 
 nav{
   /* border: 1px solid brown; */
@@ -268,7 +271,7 @@ nav{
   /* color: black !important; */
   display: inline-block;
   position: relative;
-  padding: 1px;
+ 
   align-items: center;
   /* transition: 0.3s; */
   /* background: var(--club3-color); */
@@ -278,16 +281,20 @@ nav{
   z-index: 10;
   /* color: var(--light-color) !important;  */
 /* box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5); */
- margin-top: 2vh; padding: 0; border-radius: 5% 10%;
-
+ margin-top: 2vh;  border-radius: 5% 10%;
+margin-left: 5vw;
 
 }
 nav ul li {
    border-radius: 12%;
    margin-bottom: 1px;
-  
+   padding: 0.5vw;
 
 }
+ nav ul li:first-child a{
+  color: #fff;
+  background: var(--club-color);
+} 
 nav  ul li a:hover {
   /* background-color: rgba(10, 15, 41, 0); */
   /* color: #ebd9cc; */
@@ -328,7 +335,7 @@ margin-top: -2vh !important;
 #mobile_menu ul li a{
   width: 99vw ;
   padding: -0.1vh;
-  font-size: smaller !important;
+  font-size: medium !important;
   border-radius: 0;
   background-color: #9b7769ac;
   color: rgb(233, 207, 7);
@@ -477,7 +484,7 @@ iframe{
 .about {
   /* border: 2px solid black; */
   max-width: 99vw;
-  overflow: hidden;
+  overflow: hidden !important;
   background-color: rgba(199, 187, 92, 0.429);  position: relative;
   /* background-image: url("../img/IMG_001\ \(206\).jpg"); */
 }
@@ -552,6 +559,7 @@ iframe{
   font-size: 1.5rem;
   box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  overflow: hidden;
   /* margin-top: 2vh;
   margin-left: 2vw; */
   /* padding: 10px; */
@@ -613,6 +621,50 @@ iframe{
 .details {
   background-image: url("../img//shoot/3Q4A2530.jpg");
 }
+
+#prvaPostava{
+  background: url("../img/postava.jpg");
+  width: auto;
+  min-height: 75vh;
+  justify-content: center;
+ align-self: end;
+ align-content: space-around;
+  margin-left: 0vw;
+  /* height: auto; */
+  background-attachment: fixed;
+  background-size: 75%;
+  background-position: center;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  /* z-index: 1; */
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 0 1% 0 1%;
+}
+  
+  /* .mreza {
+    display: grid;
+    grid-template-areas:
+      '. p p . .'
+      '. p p p .'
+      '. p . p .'
+      '. p p p .'
+      '. . p . .';
+    grid-gap: 10px;
+    height: 50vh;
+
+} */
+/* .malaSlika{
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+} */
+
+#vesti{
+background-image: url("../img/IMG_3921.jpg");
+}
 /*--------------------------------------------------------------
 # about
 --------------------------------------------------------------*/
@@ -625,7 +677,7 @@ iframe{
   /* min-height: 85vh; */
   min-width: 20vw;
   z-index: 2;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 /* .icon-box:hover,
 .icon-box-about:hover {
@@ -697,7 +749,7 @@ overflow: hidden;
 # players
 --------------------------------------------------------------*/
 #treninzi{
-  background-image: url("../img/IMG_3384.jpg");
+  background-image: url("../img/IMG_2862.jpg");
   
 }
 
@@ -705,15 +757,31 @@ overflow: hidden;
 /*--------------------------------------------------------------
 # players
 --------------------------------------------------------------*/
-/* .players{
-  /* background-image: url("../img//shoot/3Q4A5163.jpg"); */
-/* }  */
+ .players{
+  background-color: rgba(36, 83, 21, 0.667);box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+ }  
 .igraci {
   width: inherit;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-wrap: wrap;*/
+   flex-direction: row; 
   min-height: 70vh;
+  border-bottom: 0.5px;
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  background-color: rgba(236, 199, 53, 0.769);
+}
+#filtriranje{
+   height: 20vh;
+}
+#filtriranje input{
+  width: 30%;
+}
+.startnihJ h6{
+  color: #d1da2e;
+  text-align: center;
+  font-size: 1.1rem;
+  text-shadow: gray 1px 1px;
 }
 
 #korpa{
@@ -733,12 +801,33 @@ overflow: hidden;
   z-index: 2;
   /* max-width: 30vw; */
   overflow: hidden;
-    max-width: 10vw;
+    max-width: 15vw;
 }
+.playerM{
+  
+    /* grid-area: p; */
+  max-height: 25vh;
+  min-height: 10vh;cursor: grabbing;backface-visibility: hidden;
+  max-width: 10vw;
+margin-right: 4vw;
+  overflow: hidden;
+  font-size: 0.8rem;
+
+
+}
+
 .player img, #korpa img {
   border-radius: 3px;
   margin: 0;
-  width: 100%;
+  width: 90%;
+  
+}
+
+.playerM img{
+  border-radius: 43px;
+  margin: 0;
+  width: 90%;
+  height: 60%;
   
 }
 /* .player:hover { 
@@ -747,13 +836,12 @@ overflow: hidden;
 } */
 
 .cardPlayer{
-  width: 99%;
+  width: 90%;
   height: 99%;
-  max-width: 10vw;
+  /* max-width: 10vw; */
   max-height: 35vh;
   overflow: hidden;
   z-index: 2;
-
   box-shadow: 10px 20px 20px 15px rgba(0, 0, 0, 0.3);
   backface-visibility: hidden;
   z-index: 2;
@@ -928,6 +1016,25 @@ overflow: hidden;
   background-color: #28a745;
 }
 
+.progress{
+  height: 12vh;
+  background-color: transparent;
+  backface-visibility: none;
+  margin-bottom: 2vh;
+  
+}
+.progress .progress-bar{
+  font-size: large;
+  text-align: center;
+  color: var(--dark-color);
+  text-shadow: 2px 1px var(--primary-color);
+  padding: 2vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+
+}
+
 
 #formaClanstvo{
   border-radius: 5%;
@@ -962,7 +1069,40 @@ overflow: hidden;
   border: 1px solid gray;
 }
 
+/* 
+#pregled-tabele{
+  overflow-x:scroll ;
 
+} */
+
+.formaTreninga{
+  box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.5);
+  background-color:rgba(236, 199, 53, 0.769); 
+  overflow: hidden;
+  border: 1px solid gray;
+}
+.formaTreninga input{
+  width: 25vw;
+
+}
+.formaTreninga input[type='button']{
+  color: #fff;
+  font-weight: bolder;
+  background-color: #28a746cb;
+}
+.formaTreninga input[type='reset']{
+  color: #fff;
+  font-weight: bolder;
+  background-color: #a73728c1;
+}
+
+#vesti p, #spisakTre{
+  background-color: rgba(166, 187, 230, 0.3);
+  margin-top: 2vh;
+  padding:2vw;
+  justify-content: center;
+  font-size: 1.2rem;
+}
 
 
 

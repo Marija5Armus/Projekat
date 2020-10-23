@@ -15,14 +15,25 @@ if (ulogovan_korisnik != null)
     ulogovan.setAttribute('class', "dugme");
     ulogovan.textContent = ulogovan_korisnik.kor_ime;
     izloguj.setAttribute('class', "dugme");
+    var sveDozvole = document.querySelectorAll('.admin');
+    for (let i = 0; i < sveDozvole.length; i++) {
+      sveDozvole[i].style.visibility = 'visible';
+
+
+    }
   }
 izloguj.addEventListener('click', function () {
   var odgovor = window.confirm("Da li ste sigurni?");
   if (odgovor == false) { return; }
   var prazan = {};
+
   localStorage.setItem("ulogovan", JSON.stringify(prazan));
+  var sveZabrane = document.querySelectorAll('.admin');
+  for (let i = 0; i < sveZabrane.length; i++) {
+    sveZabrane[i].style.visibility = "hidden";
+  };
   window.location.reload();
-})
+});
 
 uloguj.addEventListener('click', function () {
   var x = dohvati();
@@ -46,6 +57,13 @@ uloguj.addEventListener('click', function () {
             ulogovan_kor.kor_ime = kor_ime;
             ulogovan_kor.password = pass;
             localStorage.setItem("ulogovan", JSON.stringify(ulogovan_kor));
+            // var sveDozvole = document.querySelectorAll('.admin');
+            // for (let i = 0; i < sveDozvole.length; i++) {
+            //   sveDozvole[i].style.visibility='visible';
+
+            // }
+
+
             return;
           }
           else if (x[i].kor_ime == kor_ime && x[i].password != pass) {

@@ -58,16 +58,13 @@
           <nav>
             <div data-aos="fade-up" data-aos-delay="800">
               <ul class="nav">
-                <li class="  nav-item"><a class="nav-link" href="blog.html">Vesti</a></li>
+                <li class="nav-item"><a class="nav-link" href="vesti">Vesti</a></li>
+                <li class="nav-item"><a class="nav-link" href="about">O nama</a></li>
+                <li class="nav-item"><a class="nav-link" href="players">Prvi Tim</a></li>
                 <li class="active nav-item"><a class="nav-link" href="treninzi">Raspored Treninga</a></li>
-                <li class="nav-item"><a class="nav-link" href="about">O nama (3) </a></li>
-                <li class="nav-item"><a class="nav-link" href="sveForme"> <span>Sve forme(8)</span> </a></li>
-                <li class="nav-item"><a class="nav-link" href="players">Tim (6)</a></li>
-                <li class="nav-item"><a class="nav-link" href="welcome">video yt</a></li>
-                <li class="nav-item"><a class="nav-link" href="videoGalerija">Video galerija (4)</a></li>
-                <li class="nav-item"><a class="nav-link" href="tableRez">rez (5)</a></li>
-                <li class="nav-item"><a class="nav-link" href="club">club uvod (1)</a></li>
-                <li class="nav-item"><a class="nav-link" href="details">takmicenja (2)</a></li>
+                <li class="nav-item"><a class="nav-link" href="welcome">Video Galerija</a></li>
+                <li class="nav-item"><a class="nav-link" href="tableRez">Tabela rezultata | Super Liga</a></li>
+                <li class="nav-item"><a class="nav-link" href="details">Turniri</a></li>
                 <li class="nav-item"><a class="nav-link" href="AdminRegLog"> login forma (7)</a></li>
               </ul>
             </div>
@@ -84,15 +81,12 @@
           <nav>
             <ul class="nav d-block">
               <li class=" active nav-item"><a class=" nav-link" href="vesti"> Vesti</a></li>
+              <li class="nav-item"><a class="nav-link" href="about">O nama </a></li>
+              <li class="nav-item"><a class="nav-link" href="players">Prvi Tim</a></li>
               <li class=" nav-item"><a class="nav-link" href="treninzi">Raspored Treninga</a></li>
-              <li class="nav-item"><a class="nav-link" href="about">O nama (3) </a></li>
-              <li class="nav-item"><a class="nav-link" href="sveForme"> <span>Sve forme(8)</span> </a></li>
-              <li class="nav-item"><a class="nav-link" href="players">Tim (6)</a></li>
-              <li class="nav-item"><a class="nav-link" href="welcome">video yt</a></li>
-              <li class="nav-item"><a class="nav-link" href="videoGalerija">Video galerija (4)</a></li>
-              <li class="nav-item"><a class="nav-link" href="tableRez">rez (5)</a></li>
-              <li class="nav-item"><a class="nav-link" href="club">club uvod (1)</a></li>
-              <li class="nav-item"><a class="nav-link" href="details">takmicenja (2)</a></li>
+              <li class="nav-item"><a class="nav-link" href="welcome">Video Galerija</a></li>
+              <li class="nav-item"><a class="nav-link" href="tableRez">Tabela Rezultata | Super Liga</a></li>
+              <li class="nav-item"><a class="nav-link" href="details">Turniri</a></li>
               <li class="nav-item"><a class="nav-link" href="AdminRegLog"> login forma (7)</a></li>
             </ul>
           </nav>
@@ -101,6 +95,7 @@
     </div>
   </header>
   <!-- header, nav, nav-mobile -->
+
   <!-- first trio block form -->
   <div id="prvaSekcija" class="prva d-block d-md-flex flex-wrap">
     <div class="row my-1 ">
@@ -137,47 +132,108 @@
     </div>
   </div>
   <!-- first trio block form -->
+
   <!-- main -->
   <main>
     <div id="mainContainer">
 
-<section id="vesti">
-  <div class="col">
-    <fieldset>
-      <form name="forma" action="" method="get" onsubmit="return validacija(); popuniPodatke()">
-        <label for="iIme">Ime</label>
-        <input type="text" id="iIme" name="nIme" /> <br />
+      <section id="vesti" class="back">
+        <div class="row d-block">
+          <div class="col-10 col-lg-12">
+            <div class="timer">
+              <!-- <div class="spinner-border spinner-border-xs" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div> -->
+              <div id="timer">
 
-        <label for="iDatRodj">Datum treninga: </label>
-        <input type="date" id="iDatRodj" name="nDatRodj" /> <br />
-        <label for="itimeRodj">Vreme treninga : </label>
-        <input type="time" id="itimeRodj" name="ntimeRodj" /> <br />
-        <hr>
-        <input type="submit" value="Posalji" />
-        <input type="reset" value="Ponisti" />
-        <input id="iPrikaz" type="button" value="postavi podatke" />
-      </form>
-    </fieldset>
-    <div id="proba" class="bg-info">
-      <p>vreme treninga: </p>
-    </div>
-  </div>
-</section>
+              </div>
 
+            </div>
+          </div>
+
+          <div class="col-11 back col-lg-11 offset-1">
+            <fieldset>
+              <form name="formaTreninga" class="formaTreninga admin" action="" method="get">
+                <label for="iIme">Mesto treninga</label>
+                <input type="text" id="iIme" name="iIme" /> <br />
+
+                <label for="iDatRodj">Datum treninga: </label>
+                <input type="date" id="iDatRodj" name="iDatRodj" value="2020-9-10" /> <br />
+                <label for="itimeRodj">Vreme treninga : </label>
+                <input type="time" id="itimeRodj" name="itimeRodj" value="09:00:00" /> <br />
+                <hr>
+                <input type="button" id="spisakTreBtn" value="Posalji u Spisak treninga" />
+                <input type="reset" value="Ponisti" />
+                <input id="iPrikaz" type="button" value="Proveri Podatke" />
+
+              </form>
+            </fieldset>
+            <p>Vreme treninga: &nbsp;<span id="proba" class="bg-info">
+
+              </span> </p>
+
+            <div id="spisakTre"></div>
+
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+          <div class=" col-3  novaVest">
+            <div class="naslov">
+              Zvezda bolja za klasu
+            </div>
+            <div class="vest">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
+              perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
+              deserunt?
+            </div>
+          </div>
+          <div class=" col-3 novaVest">
+            <div class="naslov">
+              Zvezda bolja za klasu
+            </div>
+            <div class="vest">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
+              perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
+              deserunt?
+            </div>
+          </div>
+          <div class=" col-3 novaVest">
+            <div class="naslov">
+              Zvezda bolja za klasu
+            </div>
+            <div class="vest">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
+              perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
+              deserunt?
+            </div>
+          </div>
+          <div class=" col-3 novaVest">
+            <div class="naslov">
+              Zvezda bolja za klasu
+            </div>
+            <div class="vest">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
+              perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
+              deserunt?
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+      <!-- o nama -->
       <section id="about" class="about back">
-        <!-- <div class=""> -->
-        <!-- <h4 data-aos="fade-up">O nama</h4> -->
-
         <div class="kocka"></div>
-
-
         <h4><a href="">Istorijat kluba</a> </h4>
         <h6>O nama</h6>
-
-
         <div class="row iconDescription d-flex flex-wrap" data-aos="fade-up" data-aos-delay="200">
           <div class="pOne col-10 col-lg-5 justify-content-center text-align-justify py-2">
-
             Mi smo relativno mlad klub koji je osnovan jula 2017.godine. Takmičarski tim je sastavljen od igračica
             starosti 15-17 godina.
             Takmičenje 2017/18 započeo u Drugoj ligi Srbije za žene - grupa Sever. Sezona je završena
@@ -199,30 +255,15 @@
                 Mini Maxi Liga <br>
                 Kup Fudbalskog Saveza Srbije <br> <br>
                 Turniri mali fudbal – Srbija, Crna Gora, Rumunija, Hrvatska, Austrija
-
               </div>
             </div>
-
-
-
-
-
-
-            <div class="osvojena">
-
-            </div>
-
           </div>
           <div class=" col-10 col-lg-6 pTwo">
             <img src="assets/img/shoot/3Q4A5367.jpg" alt="">
           </div>
         </div>
-
         <div class="d-flex aboutTrio flex-wrap rounded-xl mx-0 my-3 row" data-aos="fade-up" data-aos-delay="200">
-
-
           <div class="icon-box col-10 col-lg-3 ">
-
             <img src="assets/img/shoot/3Q4A2884.jpg" alt="">
             <h5 class="title">
               <p><a data-toggle="collapse" href="#pOne" role="button" aria-expanded="false"
@@ -230,7 +271,6 @@
                   Zemun danas <i class="fas fa-arrow-circle-right"></i>
                 </a></p>
             </h5>
-
             <div class="collapse pOne" id="pOne">
               <div class="card card-body">
                 <p class="iconDescription">
@@ -245,18 +285,11 @@
                 </p>
               </div>
             </div>
-
-
           </div>
-
           <div class="icon-box col-10 col-lg-3">
-
-
             <h5 class="title"><a data-toggle="collapse" role="button" aria-expanded="false"
                 aria-controls="collapseExample" href="#pThree">Sezona 2017/18 <i
                   class="fas fa-arrow-circle-right"></i></a></h5>
-
-
             <div class="collapse iconDescription" id="pThree">
               <div class="card card-body">
                 Prosek godina prvog tima 2017/18 je 15.5.
@@ -269,15 +302,11 @@
             </div>
             <img src="assets/img/13243750_278493882484876_3224633045116712317_o.jpg" alt="">
           </div>
-
           <div class="icon-box col-10 col-lg-3">
-
             <img src="assets/img/pljevlja.jpg" alt="">
             <h5 class="title"><a data-toggle="collapse" role="button" aria-expanded="false"
                 aria-controls="collapseExample" href="#pFour">Sezona 2018/19 <i
                   class="fas fa-arrow-circle-right"></i></a></h5>
-
-
             <div class=" collapse iconDescription" id="pFour">
               <div class="card card-body">
                 Naredne sezone 2018/19 takmičimo se u Prvoj ligi Srbije za žene. Sezona je završena titulom prvaka i
@@ -294,107 +323,22 @@
           </div>
         </div>
       </section>
+      <!-- o nama -->
 
-      <section id="club">
-        <div class="club">
-          <div class="row d-lg-flex d-block">
-            <div class="poster bg-success" data-aos="fade-up" data-aos-delay="200">
-              <div class="poster-img ">
-                <img src="assets/img/shoot/3Q4A4626.jpg" alt="">
-              </div>
-
-              <h4 data-aos="fade-up" data-aos-delay="300">Najperspektivniji klub ženskog fudbala u Srbiji</h4>
-              <p class="poster-text">
-                Prevashodni cilj Zemuna je vaspitanje i sportsko usmerenje devojčica uzrasta od pet do trinaest godina,
-                u zavisnosti od uzrasta, devojčice ulaze u sistem takmičenja i
-                nastupaju u dresu ŽFK Zemuna, <br>
-                trenutno najperspektivnijeg kluba ženskog fudbala u Srbiji. <br>
-                Devojčice imaju dobru startnu poziciju sa lepom perspektivom za dalje napredovanje.<br>
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id='videoGalerija'>
-        <!-- <div class="video">
-
-          <div class="row">
-            <div class="col ">
-              <form id="video_upload" class='' novalidate>
-                <div class='greska' id=''> </div>
-                <div>
-                  <p> <label for="video_date"> Datum Utakmice</label>
-                    <input id="video_date" type="text" name="video_date" maxlength="15"
-                      class='form-control form-control-sm'> </p>
-
-                  <p> <label for="video_desc"> Utakmica izmedju: </label>
-                    <input id="video_desc" type="text" name="video_desc" maxlength="15"
-                      class='form-control form-control-sm'></p>
-                </div>
-                <div class='form-group'>
-                  <label for="video_url"> Unesite Link sa utakmice :</label>
-                  <input id="video_url" type="text" name="video_url" maxlength="15"
-                    class='form-control form-control-sm'>
-                </div>
-
-                <input value="Potvrdi" type="submit" class='btn btn-default btn-md' id="potvrdi_video_url">
-                <input value="Odustani" type="reset" class='btn btn-default btn-md' id="reset_video_url">
-
-              </form>
-
-              <div class="col" id="video_url_galerija">
-                ovde idu linkovi iz objekta, kada admin uploaduje, mi prikazujemo:
-                <p>Lista utakmica highlight</p>
-                <div class="d-block d-lg-flex active mx-2 my-2 px-2 r-4 py-2">
-                  <iframe class="r-4 mx-2" width="260" height="auto"
-                    src="https://www.youtube.com/embed/7oKSN116Vz4?start=139" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                  <iframe class="r-4 mx-2" width="260" height="auto"
-                    src="https://www.youtube.com/embed/7oKSN116Vz4?start=139" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div> -->
-      </section>
-
-
-
+      <!-- video galerija -->
       <section id="welcome">
         <div class="welcome">
-
-          <!-- <div class="" data-aos="fade-up" data-aos-delay="200"> -->
-
-
-
-
-
-                  <!-- <div>
-                 <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
-              frameborder="1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen> videos neki</iframe>
-              <p> aaaaa</p>
-              <button> Neki </button>
-                  </div> -->
-                <!--
-                 <div>
-              <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+          <div class="row">
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
 
-                </div>
-
-           
-            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/bb3uqv5onnI"
               frameborder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/VbQGskUlS-Q" frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
 
@@ -403,7 +347,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
 
-            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/r54Mn85exiA"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -412,23 +356,19 @@
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
-
-            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/d3Nw6BmOKag"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
-            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/iPlOCQIZom0?start=73"
+            <iframe width="260" class="mx-3 my-3" height="auto" src="https://www.youtube.com/embed/EOVrOYTkpJI"
               frameborder="1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe> -->
-
-
-
-          <div class="d-block  d-lg-flex flex-wrap mx-2 my-2">
+              allowfullscreen></iframe>
+          </div>
+          <div class="d-block admin d-lg-flex flex-wrap mx-2 my-2">
             <form class=''>
               <div class='greska' id=''> </div>
               <div>
-
                 <p> <label for="video_desc"> Naslov: </label>
                   <input id="video_desc" type="text" name="video_desc" maxlength="35"
                     class='form-control form-control-sm'></p>
@@ -446,153 +386,52 @@
           <div id="videosCont" class="d-block row pregled d-lg-flex flex-wrap">
 
           </div>
-
-
-
         </div>
       </section>
+      <!-- video galerija -->
 
+      <!-- turniriri -->
+      <section id="details" class="justify-content-center">
 
-
-      <section id="details">
-
-        <div class="details back poster">
-          <h4>Rezultati sa učešća na turnirima </h4>
-          <div id="accordionT">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-lg btn-link" data-toggle="collapse" data-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    2016
-                  </button>
-                </h5>
-              </div>
-
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionT">
-                <div class="card-body">
-                  2016. VIII međunarodni turnir “Deda Mlađa Mitrović” Beogard - I mesto <br>
-                  2016. Međunarodni turnir prijateljstva “Pljevlja 2016” (Crna Gora) - III mesto <br>
-                  2016. Međunarodni turnir “Prijedor 2016” (BIH) - I mesto <br>
-                </div>
-              </div>
+        <div class="details back row col mx-2 px-2 d-block justify-content-center d-lg-flex">
+          <div id="accordionT" class="col-12 mx-2 px-2 justify-content-center col-lg-4">
+          </div>
+          <div class="col-11 mx-1 justify-content-center col-lg-6 icon-box">
+            <h5 class="description">Zašto smo najperspektivniji klub ženskog fudbala u Srbiji ?</h5>
+            <p class="description">
+              Prevashodni cilj Zemuna je vaspitanje i sportsko usmerenje devojčica uzrasta od pet do trinaest godina,
+              u zavisnosti od uzrasta, devojčice ulaze u sistem takmičenja i
+              nastupaju u dresu ŽFK Zemuna, <br>
+              trenutno najperspektivnijeg kluba ženskog fudbala u Srbiji. <br>
+              Devojčice imaju dobru startnu poziciju sa lepom perspektivom za dalje napredovanje.<br>
+            </p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped  bg-success" role="progressbar" style="width: 10%"
+                style="height:15vh;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><i
+                  class="fas fa-medal">&nbsp;I Mesto</i></div>
             </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" aria-controls="collapseTwo">
-                    2017
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionT">
-                <div class="card-body">
-                  2017. Božićni turnir (ŽFK Jedinstvo) Dubovac - I mesto <br>
-                  2017. Međunarodni turnir za devojčice “Požega” - I mesto <br>
-                  2017. Međunarodni turnir Fragaria Cup - Prešov (Slovačka) - I mesto <br>
-                  2017. Međunarodni turnir prijateljstva "Pljevlja 2017” (Crna Gora) - I mesto <br>
-                </div>
-              </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped  bg-info" role="progressbar" style="width: 25%"
+                style="height:15vh;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></i> <i
+                  class="fas fa-medal">&nbsp;II Mesto</i></div>
             </div>
-            <div class="card">
-              <div class="card-header" id="headingThhree">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                    aria-expanded="false" aria-controls="collapseThree">
-                    2018
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThhree" data-parent="#accordionT">
-                <div class="card-body">
-                  2018. Memorijalni turnir “Deda Mlađa Mitrović” Beograd - I mesto <br>
-                  2018. Međunarodni turnir "Puldin Cup" - Plovdiv (Bugarska) - I mesto <br>
-                  2018. Međunarodni turnir prijateljstva “Pljevlja 2018” (Cna Gora) - I mesto <br>
-                  2018. Međunarodni turnir “Levač” Rekovac - I mesto <br>
-                  2018. Memorijalni turnir posvećen žrtvama bombardovanja Batajnica - I mesto <br>
-                  2018. Međunarodni turnir "Cupa Laura Rus” (Rumunija) - I mesto <br>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="card">
-              <div class="card-header" id="headingFour">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                    aria-expanded="false" aria-controls="collapseFour">
-                    2019
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionT">
-                <div class="card-body">
-                  2019. III Međunarodni turnir “Trofej Levač Rekovac”- I mesto <br>
-                  2019. VI Međunarodni turnir prijateljstva “Pljevlja 2018” (Cna Gora) - I mesto <br>
-                  2019. Međunarodni turnir "Cupa Laura Rus” (Rumunija) - I mesto <br>
-                  2019. Međunarodni turnir “Majdanpek 2019”- I mesto <br>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-header" id="headingFive">
-                <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
-                    aria-expanded="false" aria-controls="collapseFive">
-                    2020
-                  </button>
-                </h5>
-              </div>
-              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionT">
-                <div class="card-body">
-                  2020. IV Međunarodni turnir “Trofej Levač Rekovac”- I mesto <br>
-                  .....
-
-                </div>
-              </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%"
+                style="height:15vh;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><i class="fas fa-medal">
+                  &nbsp; III mesto </i> </div>
             </div>
           </div>
-
-
-
-          <!-- </div>
-
-        </div> -->
-          <!-- <div class="col-10 col-lg-4">
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
-                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%"
-                  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%"
-                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%"
-                  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div> -->
-          <!-- </div> -->
         </div>
 
       </section>
+      <!-- turniri -->
+
+
 
       <section id="treninzi" class="back">
         <div class="row d-block ">
           <!-- <h1> raspored treninga</h1> -->
-         
+
 
           <div mbsc-page class="demo-add-delete-event">
             <div style="height:100%">
@@ -608,19 +447,10 @@
                     </div>
                     <div class="mbsc-col-md-4 mbsc-col-sm-3 mbsc-col-10 md-col-right">
                       <div id="demo-add-event-day"></div>
-                      <div class="timer">
-
-                        <div id="timer">
-                          <div id="days"></div>
-                          <div id="hours"></div>
-                          <div id="minutes"></div>
-                          <div id="seconds"></div>
-                        </div>
-
-                        Ovde cu stampati counter do treninga
 
 
-                      </div>
+                      <!-- <div id="ajprobamo"></div> -->
+
                     </div>
                   </div>
                 </div>
@@ -672,23 +502,23 @@
       <section id="tableRez" class="back">
         <div class="back">
           <div class="poster">
-            <div class="row d-flex ">
+            <div class="row d-block mx-1 ">
               <!-- <h2 class="d-4 title-1 m-4"> Tabela rasporeda i rezultata utakmice</h2> -->
 
-              <div class=" d-block my-2">
-                <button class="btn my-2 btn-sm w-20 btn-success btn-outline">
+              <div class="d-block d-lg-flex mx-1 my-2">
+                <button class="btn my-2 mx-1 btn-sm w-20 btn-success btn-outline">
                   <h6>Sezona 2020/21</h6>
                 </button>
                 <button class="btn btn-sm w-20 btn-warning btn-outline"> <a href="pregled-tabele"
                     class="rez">Rezultati</a> </button>
-                <button class="btn btn-sm w-20 btn-warning btn-outline"><a href="dodaj-u-tabelu" class="rez">Dodaj
+                <button class="btn btn-sm admin w-20 btn-warning btn-outline"><a href="dodaj-u-tabelu" class="rez">Dodaj
                     utakmice</a></button>
                 <button class="btn btn-sm w-20 btn-outline btn-warning"><a
                     href="https://fss.rs/takmicenje/super-liga-z-20-21/" class=""> Pregled celokupne tabele SUPER LIGE
                     SRBIJE </a></button>
               </div>
-              <div class="col-10  pregled" id="pregled-tabele">
-                <div class="col-10 offset-2 ">
+              <div class="col-12 pregled" id="pregled-tabele">
+                <div class="col-lg-11 col">
                   <table class="table table-striped">
                     <thead class="thead-dark">
                       <tr>
@@ -710,8 +540,8 @@
                 </div>
               </div>
 
-              <div class="row  pregled" id="dodaj-u-tabelu">
-                <div class="col-10 offset-2">
+              <div class="row admin pregled" id="dodaj-u-tabelu">
+                <div class="col-10 offset-1">
 
                   <input type="text" placeholder="kolo" class='form-control '> <br>
                   <input type="text" placeholder="datum" class='form-control '> <br>
@@ -726,8 +556,8 @@
               </div>
 
 
-              <div class="row  pregled" id="izmeni-iz-tabele">
-                <div class="col-10 offset-2">
+              <div class="row admin pregled" id="izmeni-iz-tabele">
+                <div class="col-10 offset-1">
 
                   <input type="text" class='form-control eKolo'> <br>
                   <input type="text" class='form-control eDatum'> <br>
@@ -760,10 +590,10 @@
                   <input type="button" name="dugme" id="sortBrojevaAZ" value="Sortiraj Igrače" />
                   <label for="sortBrojevaZA"><i class="fas fa-sort-numeric-up-alt"></i></label>
                   <input type="button" name="dugmeAZ" id="sortBrojevaZA" value="Sortiraj Igrače" /> <br>
-                 
+
                   <form action="" method="">
-                  <label for="imeIgraca">Pronadji po imenu: </label>
-                  <input type="text" id="imeIgraca" name="imeIgraca" placeholder="Podudaranje po Imenu" />
+                    <label for="imeIgraca">Pronadji po imenu: </label>
+                    <input type="text" id="imeIgraca" name="imeIgraca" placeholder="Podudaranje po Imenu" />
                   </form>
 
                   <br />
@@ -772,11 +602,11 @@
                   <input type="text" id="pozIgraca" name="pozIgraca" placeholder="Podudaranje po poziciji" />
                   <!-- </form> -->
                   <br />
-                
+
                   <label for="inputGod">Igrači u opsegu godina od 15 do <span id="godIzbor">35</span>: </label>
-                  <input type="range" min="15" max="35"   id="inputGod" /><br /><br />
+                  <input type="range" min="15" max="35" id="inputGod" /><br /><br />
                   <input type="button" name="dugme" id="btnGodine" value="Pronađi po godinama" /><br /><br />
-              
+
                 </div>
               </div>
             </div>
@@ -785,81 +615,16 @@
 
 
 
-          <div class="row igraci d-block d-md-flex flex-wrap">
-            <!-- <div class="col  ">
+          <div class="row  d-flex flex-wrap">
+            <div class="igraci mx-1 d-flex flex-wrap">
 
-            </div> -->
-
-
-            <!-- <div class="col player ">
-              <img src="assets/img/lanaprof.jpeg" class="card-img-top" alt="...">
-              <div class="card col">
-
-                <div class="card-body">
-                  <p class="card-title">Lana Čolić</p>
-                  <p class="card-text">
-                    <span><strong>Broj :</strong> 10</span>
-                    <span><strong>Pozicija :</strong> Prednji vezni</span>
-                    <span><strong> Datum rođenja :</strong> 12.10.2001</span>
-                    <span><strong>Nastupi za Rezentaciju : </strong> U-15, U-17, U-19, Futsal A </span>
-                    <span><strong>Golova u sezoni :</strong> 9 </span>
-                  </p>
-
-                </div>
-              </div>
             </div>
-            <div class="col player ">
-              <div class="card col">
-                <img src="assets/img/sara.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Sara Stokic</p>
-                  <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
-                    <span> <strong>Pozicija :</strong> Prednji vezni</span></p>
-
-                </div>
-              </div>
-            </div>
-            <div class="col player ">
-              <div class="card col">
-                <img src="assets/img/sebek.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Sara Sebeke</p>
-                  <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
-                    <span> <strong>Pozicija :</strong> Prednji vezni</span>.</p>
-
-                </div>
-              </div>
-            </div>
-            <div class="col player">
-              <div class="card col">
-                <img src="assets/img/sanjica.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Sanja Sofronic</p>
-                  <p class="card-text"> <span> <strong>Broj :</strong> 10</span>
-                    <span> <strong>Pozicija :</strong> Prednji vezni</span></p>
-                  <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div data-aos="fade-up" class="col player">
-              <div class="card col">
-                <img src="assets/img/brusin.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title">Card title</p>
-                  <p class="card-text">Some quick .</p>
-                  <a href="#" class="btn btn-p btn-sm btn-outline-success my-2 my-sm-0">Go somewhere</a>
-                </div>
-              </div>
-            </div> -->
-
-
-
-
           </div>
-          <div>
-            <h6>Lista igraca za naredno kolo</h6>
-            <div id="prvaPostava" class="row d-block d-md-flex flex-wrap">
-
+          <div class=" ">
+            <div class="startnihJ form-control form-control-sm form-control-outline-info">
+              <h6>Lista igraca za naredno kolo</h6>
+            </div>
+            <div id="prvaPostava" class=" mreza d-flex flex-wrap">
 
             </div>
           </div>
@@ -1210,148 +975,9 @@
 
       </section>
 
-      <section id='sveForme'>
-        <div class=" abc">
-          <div class=" row d-block d-md-flex flex-wrap">
-
-            <!-- <div class="col bg-light"><h3>Forma za upis podataka igracica</h3> </div> -->
 
 
 
-            <div class="col bg-light">
-              <h3>Forma za registraciju igracica</h3>
-              <form id="player_reg" class='' novalidate>
-                <div class='form-group'>
-                  <label for="player_name"> Unesite Ime : </label>
-                  <input id="player_name" type="text" class="is-valid" name="player_name" maxlength="15"
-                    class='form-control'>
-                  <div class="valid-feedback">
-
-                    Looks good!
-                  </div>
-                </div>
-                <div class='form-group'>
-                  <label for="player_surname"> Unesite Prezime : </label>
-                  <input id="player_surname" type="text" class="is-invalid" name="player_surname" maxlength="15"
-                    class='form-control'>
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
-                </div>
-
-
-                <div class='form-group'>
-                  <label for="player_img"> Unesite Sliku Igraca: </label>
-
-                  <input type="file" name="file" id="file" />
-                  <input type="button" value="load" onclick="loadFile()" id="btnLoad" />
-
-                  <!-- <input id="player_img" type="text" name="player_img" maxlength="15" class='form-control'> -->
-                </div>
-                <div class='form-group'>
-                  <label for="player_date"> Unesite Datum Rođenja : </label>
-                  <input id="player_date" type="text" name="player_date" maxlength="15" class='form-control'>
-                  <div class="invalid-feedback">
-                    Please choose a username.
-                  </div>
-                </div>
-
-
-                <div class='form-group'>
-                  <label for="player_position"> Unesite Poziciju Igraca: </label>
-                  <input id="player_position" type="text" name="player_position" maxlength="15" class='form-control'>
-                </div>
-                <div class='form-group'>
-                  <label for="player_number"> Unesite Broj : </label>
-                  <input id="player_number" type="text" name="player_number" maxlength="15" class='form-control'>
-                </div>
-
-
-
-
-                <button id='savePlayer'> Sacuvaj podatke igraca</button>
-              </form>
-
-            </div>
-            <!-- <div class="row d-lg-flex d-block "> -->
-            <!-- <div> -->
-
-            <!-- </div> -->
-            <!-- </div> -->
-
-            <!-- <div class="col bg-light">
-            <h3>Forma za prijavu admina</h3>
-            <form id="admin_log" class='obrisi' novalidate>
-              <div class='form-group'>
-                <label for="admin_name"> Unesite Korisničko Ime: </label>
-                <input id="admin_name" type="text" name="name_reg" maxlength="15" class='form-control'>
-              </div>
-              <div class='form-group'>
-                <label for="admin_pass"> Unesite lozinku: </label>
-                <input id="admin_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
-              </div>
-            </form>
-          </div> -->
-
-          </div>
-          <div class="row ">
-            <div class="col-11">
-              <table class="table table-striped">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Clan ID</th>
-                    <th scope="col">JMBG</th>
-                    <th scope="col">Ime</th>
-                    <th scope="col">Prezime</th>
-                    <th scope="col">Datum Rođenja</th>
-                    <th scope="col">Adresa</th>
-                    <th scope="col">Grad</th>
-                    <th scope="col">Telefon</th>
-                    <th scope="col">E-mail</th>
-                  </tr>
-                </thead>
-                <tbody id="listaClanova">
-                </tbody>
-              </table>
-
-              <input type="button" class="btn btn-sm btn-outline-info btnMember1" value="Preuzmi listu članova"
-                onclick='window.print()'>
-              <input type="button" class="btn btn-sm btn-outline-info btnMember2" value="Oslobodi listu">
-            </div>
-
-          </div>
-
-
-          <div class="row ">
-            <div class="col-11">
-              <table class="table table-striped">
-                <thead class="thead-info">
-                  <tr>
-
-                    <th scope="col">Ime I Prezime deteta</th>
-                    <th scope="col">Ime i Prezime Roditelja</th>
-                    <th scope="col">Datum Rođenja deteta</th>
-                    <th scope="col">Adresa</th>
-                    <th scope="col">Grad</th>
-                    <th scope="col">Telefon</th>
-                    <th scope="col">E-mail</th>
-                  </tr>
-                </thead>
-                <tbody id="listaDece">
-                </tbody>
-              </table>
-
-              <input type="button" class="btn btn-sm btn-outline-info btnMember1" value="Preuzmi listu dece"
-                onclick='window.print()'>
-              <input type="button" class="btn btn-sm btn-outline-info btnMember2" value="Oslobodi listu">
-            </div>
-
-          </div>
-
-
-
-        </div>
-      </section>
       <section id='AdminRegLog'>
         <div class="row ">
           <div id='dugmici'>
@@ -1360,7 +986,7 @@
             <div id="ulog" class='obrisi'></div>
             <div id="izlog" class='obrisi'>Izloguj se</div>
           </div>
-          <div class="col  bg-light">
+          <div class="col-5  bg-dark">
             <h3>Forma za prijavu admina</h3>
             <form id="admin_reg" class='obrisi' novalidate>
               <div class='greska' id='greska1'> </div>
@@ -1393,6 +1019,150 @@
             </form>
           </div>
 
+        </div>
+        <div class="row admin">
+
+          <div class=" abc">
+            <div class=" row d-block d-md-flex flex-wrap">
+
+              <!-- <div class="col bg-light"><h3>Forma za upis podataka igracica</h3> </div> -->
+
+
+
+              <div class="col bg-light">
+                <h3>Forma za registraciju igracica</h3>
+                <form id="player_reg" class='' novalidate>
+                  <div class='form-group'>
+                    <label for="player_name"> Unesite Ime : </label>
+                    <input id="player_name" type="text" class="is-valid" name="player_name" maxlength="15"
+                      class='form-control'>
+                    <div class="valid-feedback">
+
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class='form-group'>
+                    <label for="player_surname"> Unesite Prezime : </label>
+                    <input id="player_surname" type="text" class="is-invalid" name="player_surname" maxlength="15"
+                      class='form-control'>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+
+
+                  <div class='form-group'>
+                    <label for="player_img"> Unesite Sliku Igraca: </label>
+                    <input id="browse" type="file" multiple>
+                    <div id="previewImg"></div>
+                    <!-- <input type="file" name="file" id="file" /> -->
+                    <!-- <input type="button" value="load" onclick="loadFile()" id="btnLoad" /> -->
+
+                    <!-- <input id="player_img" type="text" name="player_img" maxlength="15" class='form-control'> -->
+                  </div>
+                  <div class='form-group'>
+                    <label for="player_date"> Unesite Datum Rođenja : </label>
+                    <input id="player_date" type="text" name="player_date" maxlength="15" class='form-control'>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+
+
+                  <div class='form-group'>
+                    <label for="player_position"> Unesite Poziciju Igraca: </label>
+                    <input id="player_position" type="text" name="player_position" maxlength="15" class='form-control'>
+                  </div>
+                  <div class='form-group'>
+                    <label for="player_number"> Unesite Broj : </label>
+                    <input id="player_number" type="text" name="player_number" maxlength="15" class='form-control'>
+                  </div>
+
+
+
+
+                  <button id='savePlayer'> Sacuvaj podatke igraca</button>
+                </form>
+
+              </div>
+              <!-- <div class="row d-lg-flex d-block "> -->
+              <!-- <div> -->
+
+              <!-- </div> -->
+              <!-- </div> -->
+
+              <!-- <div class="col bg-light">
+              <h3>Forma za prijavu admina</h3>
+              <form id="admin_log" class='obrisi' novalidate>
+                <div class='form-group'>
+                  <label for="admin_name"> Unesite Korisničko Ime: </label>
+                  <input id="admin_name" type="text" name="name_reg" maxlength="15" class='form-control'>
+                </div>
+                <div class='form-group'>
+                  <label for="admin_pass"> Unesite lozinku: </label>
+                  <input id="admin_pass" type="password" name="id_pass" maxlength="15" class='form-control'>
+                </div>
+              </form>
+            </div> -->
+
+            </div>
+            <div class="row ">
+              <div class="col-11">
+                <table class="table table-striped">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Clan ID</th>
+                      <th scope="col">JMBG</th>
+                      <th scope="col">Ime</th>
+                      <th scope="col">Prezime</th>
+                      <th scope="col">Datum Rođenja</th>
+                      <th scope="col">Adresa</th>
+                      <th scope="col">Grad</th>
+                      <th scope="col">Telefon</th>
+                      <th scope="col">E-mail</th>
+                    </tr>
+                  </thead>
+                  <tbody id="listaClanova">
+                  </tbody>
+                </table>
+
+                <input type="button" class="btn btn-sm btn-outline-info btnMember1" value="Preuzmi listu članova"
+                  onclick='window.print()'>
+                <input type="button" class="btn btn-sm btn-outline-info btnMember2" value="Oslobodi listu">
+              </div>
+
+            </div>
+
+
+            <div class="row ">
+              <div class="col-11">
+                <table class="table table-striped">
+                  <thead class="thead-info">
+                    <tr>
+
+                      <th scope="col">Ime I Prezime deteta</th>
+                      <th scope="col">Ime i Prezime Roditelja</th>
+                      <th scope="col">Datum Rođenja deteta</th>
+                      <th scope="col">Adresa</th>
+                      <th scope="col">Grad</th>
+                      <th scope="col">Telefon</th>
+                      <th scope="col">E-mail</th>
+                    </tr>
+                  </thead>
+                  <tbody id="listaDece">
+                  </tbody>
+                </table>
+
+                <input type="button" class="btn btn-sm btn-outline-info btnMember1" value="Preuzmi listu dece"
+                  onclick='window.print()'>
+                <input type="button" class="btn btn-sm btn-outline-info btnMember2" value="Oslobodi listu">
+              </div>
+
+            </div>
+
+
+
+          </div>
         </div>
       </section>
 
@@ -1476,7 +1246,7 @@
     <div class="container-footer d-block d-md-flex flex-wrap">
 
       <div class="col footer-contact">
-        <h5> Informacije | Uplate | Kontakt  </h5>
+        <h5> Informacije | Uplate | Kontakt </h5>
         <p>
           Ugrinovački put 157e <br />
           Zemun 11080, Beograd<br />
@@ -1485,13 +1255,13 @@
           M B : 1 7 4 1 5 5 7 3 <br>
           Žiroračun : 250-1250000015060-80br
 
-           EurobankEFG    <br>
+          EurobankEFG <br>
           <strong>Telefon:</strong> +381 64 11 33 130<br />
           <strong>Telefon:</strong> +381 63 301 872<br />
           <strong>Email:</strong> zfk.zemun@gmail.com <br />
         </p>
         <br>
-      
+
 
       </div>
 
@@ -1547,17 +1317,17 @@
 
         <p><i class="fas fa-angle-double-right"></i>
           <a href="http://www.fsb.org.rs/vesti">Fudbalski savez Beograda</a></p>
-          <p>
-            Budite u korak sa nama, zapratite nas na društvenim mrežama
-          </p>
-  
-  
-          <a href="https://www.facebook.com/zfkzemun" class="facebook">
-            <i class="fab fa-facebook-f"></i>www.facebook/zfkzemun/</a> <br>
-          <a href="https://www.instagram.com/zfkzemun/" class="instagram">
-            <i class="fab fa-instagram"></i> www.insagram/com/zfkzemun/</a> <br>
-          <a href="#" class="viber"> <i class="fab fa-viber"></i>Jasmina: +381 63 301 872</a>
-  
+        <p>
+          Budite u korak sa nama, zapratite nas na društvenim mrežama
+        </p>
+
+
+        <a href="https://www.facebook.com/zfkzemun" class="facebook">
+          <i class="fab fa-facebook-f"></i>www.facebook/zfkzemun/</a> <br>
+        <a href="https://www.instagram.com/zfkzemun/" class="instagram">
+          <i class="fab fa-instagram"></i> www.insagram/com/zfkzemun/</a> <br>
+        <a href="#" class="viber"> <i class="fab fa-viber"></i>Jasmina: +381 63 301 872</a>
+
       </div>
 
     </div>
@@ -1602,7 +1372,8 @@
   <script src="./assets/js/member.js"></script>
   <script src="./assets/js/videoGallery.js"></script>
   <script src="./assets/js/mobileMenu.js"></script>
-
+  <script src="./assets/js/Tournaments.js"></script>
+  <script src="./assets/js/schedule.js"></script>
   <script src="./assets/js/app.js"></script>
   <script src="./assets/js/mobiscroll.javascript.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

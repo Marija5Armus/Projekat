@@ -10,12 +10,11 @@ function podaciIgraca(data) {
       <img src=${igrac.Slika} class="card-img-top" alt="...">
       <div class="cardPlayer"><p class="card-title">${igrac.Ime}</p>
       <p class="card-text">
-        <span><strong>Broj :</strong> ${igrac.Broj}</span>
-        <span><strong>Pozicija :</strong> ${igrac.Pozicija}</span>
-        <span><strong>Datum rođenja :</strong> ${igrac.Datum}</span>
-        <span><strong>Nastupi za Rezentaciju : </strong> U-15, U-17, U-19, Futsal A </span>
-        <span><strong>Golova u sezoni :</strong> 9 </span>
-        <a class="btnPostava btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
+        <span><strong>Broj :</strong> ${igrac.Broj}</span><br>
+        <span><strong>Pozicija :</strong> ${igrac.Pozicija}</span><br>
+        <span><strong>Datum rođenja :</strong> ${igrac.Datum}</span><br>
+        <span><strong>Golova u sezoni :</strong> ${igrac.Godine - 13} </span><br>
+        <a class="btnPostava admin btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
       </p></div>
       </div>`;
   }
@@ -79,23 +78,42 @@ function uzmiIgraca(e) {
       listaPrvaPostava.push(uzetiIgraci);
       //  console.log(uzetiIgraci);
       var k = '';
+      for (let i = 0; i < listaPrvaPostava.length; i++) {
+        const element = listaPrvaPostava[i];
 
-      listaPrvaPostava.forEach(function (element) {
-        k += `<div class=" player d-flex flex-wrap">
-        <img src=${element.Slika} class="card-img-top" alt="...">
+        k += `<div class="playerM">
+        <img src=${element.Slika}  class="card-img-top " alt="...">
        <div class="cardPlayer"><p class="card-title">${element.Ime}</p>
         <p class="card-text">
-      <span><strong>Broj :</strong> ${element.Broj}</span>
-      <span><strong>Pozicija :</strong> ${element.Pozicija}</span>
-      <span><strong>Datum rođenja :</strong> ${element.Datum}</span>
-      <span><strong>Nastupi za Rezentaciju : </strong> U-15, U-17, U-19, Futsal A </span>
-      <span><strong>Golova u sezoni :</strong> 9 </span>
+      <span><strong>Broj :</strong> ${element.Broj}</span><br>
+    
     </p></div>
     </div>`;
-      }); prvaPostava.innerHTML = k;
-    }
-  } else { console.log("Ne postoji artikal sa definisanim id"); }
+      }
+
+
+     prvaPostava.innerHTML = k;
+
+
+   
+  }
+} else { console.log("Ne postoji artikal sa definisanim id"); }
 };
+
+// var dugmeNazad = document.querySelectorAll('.btnVratiNazad');
+// for (let i = 0; i < dugmeNazad.length; i++) {
+//   dugmeNazad[i].style.color='red';
+//    dugmeNazad[i].addEventListener('click', brisiPostavu)
+  
+// }
+// function brisiPostavu(){
+//   e.preventDefault();
+//   let idObr = this.getAttribute('data-id');
+//     listaPrvaPostava.splice(idObr, 1);
+    
+// }
+
+
 
 function sortirajBrojeveAZ(e) {
   e.preventDefault();
@@ -159,72 +177,94 @@ function filterPozicijeIgraca(e) {
 
 }
 
-imeIgraca.addEventListener('input', filterImenaIgraca);
-sortiraj.addEventListener("click", sortirajBrojeveAZ);
-sortirajZA.addEventListener("click", sortirajBrojeveZA);
-pozicijaIgraca.addEventListener('input', filterPozicijeIgraca);
-btnGodine.addEventListener('click', filterPoGod);
-prikaziInputGod.addEventListener('input', menjajGodine);
+// imeIgraca.addEventListener('input', filterImenaIgraca);
+// sortiraj.addEventListener("click", sortirajBrojeveAZ);
+// sortirajZA.addEventListener("click", sortirajBrojeveZA);
+// pozicijaIgraca.addEventListener('input', filterPozicijeIgraca);
+// btnGodine.addEventListener('click', filterPoGod);
+// prikaziInputGod.addEventListener('input', menjajGodine);
 
 
 
 
-  // var ime=document.querySelector('player_name');
-  // var prezime=document.querySelector('player_surname');
-  // var datumRodj=document.querySelector('player_date');
-  // var pozicija=document.querySelector('player_position');
+// var ime = document.querySelector('player_name');
+// var prezime = document.querySelector('player_surname');
+// var datumRodj = document.querySelector('player_date');
+// var pozicija = document.querySelector('player_position');
 
 
-  // function loadFile() {
-  //   var input, file, fr;
 
-  //   if (typeof window.FileReader !== "function") {
-  //     alert("Api nije podrzan od strane pretrazivaca");
-  //     return;
-  //   }
-  //   input = document.getElementById("file");
-  //   if (!input) {
-  //     alert("ne mogu da nadjem file input element");
-  //   } else if (!input.files) {
-  //     alert("Ne podrzavam svojstva ovog file inputa");
-  //   } else if (!input.files[0]) {
-  //     alert("niste izabrali file");
-  //   }
+// function previewFiles() {
 
-  //   file = input.files[0];
-  //   fr = new FileReader();
-  //   fr.onload = prihvatamTekst;
-  //   fr.readAsText(file);
+//   var preview = document.querySelector('#previewImg');
+//   var files = document.querySelector('input[type=file]').files;
 
-  //   function prihvatamTekst(e) {
-  //     let linije = e.target.result;
-  //     var niz = JSON.parse(linije);
-  // // document.getElementById('cont').innerHTML=niz;
-  //     console.log(niz);
-  //   }
-  // };
+//   function readAndPreview(file) {
 
-  // document.getElementById('savePlayer').addEventListener('click', sacuvajIgraca);
-  // function dodeliId(){
-  //  return   t=2;
-  // }
+//     // Make sure `file.name` matches our extensions criteria
+//     if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+//       var reader = new FileReader();
+
+//       reader.addEventListener("input", function () {
+
+//         var image = new Image();
+//         image.height = 100;
+//         image.width = 100;
+//         image.title = file.name;
+//         image.src = this.result;
+
+//         preview.appendChild(image);
+//       }, false);
+
+//       reader.readAsDataURL(file);
+
+//     }
+
+//   }
+
+//   if (files) {
+//     [].forEach.call(files, readAndPreview);
+//   }
+//   var slIgracaSrc = image.src;
+//   return slIgracaSrc;
+
+// }
+
+// document.getElementById('browse').addEventListener('change', previewFiles);
 
 
-  // function vratiGodine(){
-  //   return a= (new Date().getFullYear) - (datumRodj.value);
-  // }
+// var t = 1;
+// document.getElementById('savePlayer').addEventListener('click', sacuvajIgraca);
+// function dodeliId() {
+//   t = t + 2;
+//   return t;
+// }
 
-  // function sacuvajIgraca(){
 
-  //   const  player={
-  //     // Id:  dodeliId,
-  //     Slika: "",
-  //     Ime: ime.value+" "+prezime.value,
-  //      Broj:broj.value,
-  //     Pozicija: pozicija.value,
-  //    Datum:datumRodj.value.toDateString()
-  // // Godine: vratiGodine
-  //   };
-  // };
+// function vratiGodine() {
+//   return a = (new Date().getFullYear) - parseInt(datumRodj.value.trim().split('-')[2]);
+// }
+
+// function sacuvajIgraca() {
+
+//   e.preventDefault();
+
+
+
+
+
+
+//   const player = {
+//     Id: dodeliId(),
+//     Slika: previewFiles(),
+//     Ime: ime.value + " " + prezime.value,
+//     Broj: broj.value,
+//     Pozicija: pozicija.value,
+//     Datum: datumRodj.value,
+//     Godine: vratiGodine()
+//   };
+
+//   data.push(player);
+// };
 
   //console.log(games);
