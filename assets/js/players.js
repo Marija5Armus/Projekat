@@ -14,7 +14,7 @@ function podaciIgraca(data) {
         <span><strong>Pozicija :</strong> ${igrac.Pozicija}</span><br>
         <span><strong>Datum rođenja :</strong> ${igrac.Datum}</span><br>
         <span><strong>Golova u sezoni :</strong> ${igrac.Godine - 13} </span><br>
-        <a class="btnPostava admin btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
+        <a class="btnPostava btn btn-p btn-sm btn-outline-success my-2 my-sm-0" href="#" data-id="${i}">DODAJ U POSTAVU</a>
       </p></div>
       </div>`;
   }
@@ -61,7 +61,7 @@ function filterPoGod() {
 
 var listaPrvaPostava = [];
 function uzmiIgraca(e) {
-  if (e instanceof Event) {
+  // if (e instanceof Event) {
     e.preventDefault();
 
     var idIgraca = this.getAttribute('data-id');
@@ -96,7 +96,7 @@ function uzmiIgraca(e) {
 
 
    
-  }
+  // }
 } else { console.log("Ne postoji artikal sa definisanim id"); }
 };
 
@@ -177,12 +177,12 @@ function filterPozicijeIgraca(e) {
 
 }
 
-// imeIgraca.addEventListener('input', filterImenaIgraca);
-// sortiraj.addEventListener("click", sortirajBrojeveAZ);
-// sortirajZA.addEventListener("click", sortirajBrojeveZA);
-// pozicijaIgraca.addEventListener('input', filterPozicijeIgraca);
-// btnGodine.addEventListener('click', filterPoGod);
-// prikaziInputGod.addEventListener('input', menjajGodine);
+imeIgraca.addEventListener('input', filterImenaIgraca);
+sortiraj.addEventListener("click", sortirajBrojeveAZ);
+sortirajZA.addEventListener("click", sortirajBrojeveZA);
+pozicijaIgraca.addEventListener('input', filterPozicijeIgraca);
+btnGodine.addEventListener('click', filterPoGod);
+prikaziInputGod.addEventListener('input', menjajGodine);
 
 
 

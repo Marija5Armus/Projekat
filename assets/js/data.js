@@ -168,6 +168,7 @@ var allVideos=[];
 var treninzi=[];
 
 
+
 if(localStorage.games){
     games=JSON.parse(localStorage.games);
 }
@@ -185,3 +186,6 @@ if(localStorage.videos){
 if(localStorage.treninzi){
     treninzi=JSON.parse(localStorage.treninzi);
 }
+// if(localStorage.data){
+//     data=JSON.parse(localStorage.data);
+// }

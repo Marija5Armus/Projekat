@@ -65,7 +65,7 @@
                 <li class="nav-item"><a class="nav-link" href="welcome">Video Galerija</a></li>
                 <li class="nav-item"><a class="nav-link" href="tableRez">Tabela rezultata | Super Liga</a></li>
                 <li class="nav-item"><a class="nav-link" href="details">Turniri</a></li>
-                <li class="nav-item"><a class="nav-link" href="AdminRegLog"> login forma (7)</a></li>
+                <li class="nav-item"><a class="nav-link" href="AdminRegLog"> Login</a></li>
               </ul>
             </div>
           </nav>
@@ -87,7 +87,7 @@
               <li class="nav-item"><a class="nav-link" href="welcome">Video Galerija</a></li>
               <li class="nav-item"><a class="nav-link" href="tableRez">Tabela Rezultata | Super Liga</a></li>
               <li class="nav-item"><a class="nav-link" href="details">Turniri</a></li>
-              <li class="nav-item"><a class="nav-link" href="AdminRegLog"> login forma (7)</a></li>
+              <li class="nav-item"><a class="nav-link" href="AdminRegLog"> Login</a></li>
             </ul>
           </nav>
         </div>
@@ -182,41 +182,41 @@
 
         </div>
 
-        <div class="row">
-          <div class=" col-3  novaVest">
+        <div class="row ">
+          <div class=" col-5  bg-light mx-1 my-2  novaVest">
             <div class="naslov">
               Zvezda bolja za klasu
-            </div>
+            </div> <hr>
             <div class="vest">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
               perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
               deserunt?
             </div>
           </div>
-          <div class=" col-3 novaVest">
+          <div class=" col-5  bg-light mx-1 my-2 novaVest">
             <div class="naslov">
               Zvezda bolja za klasu
-            </div>
+            </div> <hr>
             <div class="vest">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
               perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
               deserunt?
             </div>
           </div>
-          <div class=" col-3 novaVest">
+          <div class=" col-5  bg-light mx-1 my-2 novaVest">
             <div class="naslov">
               Zvezda bolja za klasu
-            </div>
+            </div> <hr>
             <div class="vest">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
               perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
               deserunt?
             </div>
           </div>
-          <div class=" col-3 novaVest">
+          <div class=" col-5  bg-light mx-1 my-2 novaVest">
             <div class="naslov">
               Zvezda bolja za klasu
-            </div>
+            </div> <hr>
             <div class="vest">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores id impedit commodi accusantium, sed
               perspiciatis eligendi tempore beatae rerum obcaecati at optio facilis nam voluptatibus iusto iste ut alias
@@ -579,37 +579,39 @@
       <section id="players">
         <div class=" players back">
           <div class="row">
-            <div class="col">
+           
               <!-- <button> Rezultati</button> <button> Lista strelaca</button> -->
 
               <div id="filteri">
                 <!-- Filtriranje -->
                 <div id="filtriranje">
-
+                  <div class="row">
+<div class="col-4">
                   <label for="sortBrojevaAZ"><i class="fas fa-sort-numeric-down"></i></label>
-                  <input type="button" name="dugme" id="sortBrojevaAZ" value="Sortiraj Igrače" />
+                  <input type="button" name="dugme" id="sortBrojevaAZ" value="Sortiraj Igrače" /> <br>
                   <label for="sortBrojevaZA"><i class="fas fa-sort-numeric-up-alt"></i></label>
-                  <input type="button" name="dugmeAZ" id="sortBrojevaZA" value="Sortiraj Igrače" /> <br>
-
-                  <form action="" method="">
+                  <input type="button" name="dugmeAZ" id="sortBrojevaZA" value="Sortiraj Igrače" /> 
+                  </div>
+               <div class="col-4">   <form action="" method="">
                     <label for="imeIgraca">Pronadji po imenu: </label>
                     <input type="text" id="imeIgraca" name="imeIgraca" placeholder="Podudaranje po Imenu" />
                   </form>
-
-                  <br />
+                
+                               
                   <!-- <form action="" method=""> -->
                   <label for="pozIgraca">Pronadji po poziciji: </label>
                   <input type="text" id="pozIgraca" name="pozIgraca" placeholder="Podudaranje po poziciji" />
-                  <!-- </form> -->
-                  <br />
+                </div>  <!-- </form> -->
+                <div class="col-4">      
 
                   <label for="inputGod">Igrači u opsegu godina od 15 do <span id="godIzbor">35</span>: </label>
-                  <input type="range" min="15" max="35" id="inputGod" /><br /><br />
+                  <input type="range" min="15" max="35" id="inputGod" />
                   <input type="button" name="dugme" id="btnGodine" value="Pronađi po godinama" /><br /><br />
-
+                </div> 
+              </div>
                 </div>
               </div>
-            </div>
+            
 
           </div>
 
